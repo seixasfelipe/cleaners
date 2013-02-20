@@ -8,15 +8,15 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="assets/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="/layout/assets/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
+    <link href="/layout/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/layout/assets/css/custom.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/layout/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -24,11 +24,11 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/layout/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/layout/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/layout/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/layout/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="/layout/assets/ico/favicon.png">
   </head>
 
   <body>
@@ -41,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="home.html"><img src="assets/img/cleaners-logo-mini.jpg"/></a>
+          <a class="brand" href="home.html"><img src="/layout/assets/img/cleaners-logo-mini.jpg"/></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="home.html">Início</a></li>
@@ -50,7 +50,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="servicos-novo.html">Novo</a></li>
                   <li><a href="servicos-todos.html">Todos</a></li>
-                  <li><a href="servicos-agendamentos.html">Agendamentos</a></li>
+                  <!--<li><a href="servicos-agendamentos.html">Agendamentos</a></li>-->
                 </ul>
               </li>
               <li class="dropdown">
@@ -91,11 +91,12 @@
 
         <thead>
           <tr>
-            <th>#</th>
+            <th>cod. interno</th>
             <th>nome do cliente</th>
             <th>email</th>
             <th>data de nascimento</th>
             <th>cliente desde</th>
+            <th></th>
           </tr>
         </thead>
         
@@ -107,6 +108,7 @@
             <td>felipe@gmail.com</td>
             <td>10/03/1970</td>
             <td>mar/2010</td>
+            <td><a href="clientes-detalhes.html" class="btn btn-info">Detalhes</a></td>
           </tr>
           <tr>
             <td><a href="clientes-detalhes.html">000249</a></td>
@@ -114,6 +116,7 @@
             <td>joana.darc@gmail.com</td>
             <td>30/06/1982</td>
             <td>mar/2012</td>
+            <td><a href="clientes-detalhes.html" class="btn btn-info">Detalhes</a></td>
           </tr>
           <tr>
             <td><a href="clientes-detalhes.html">000278</a></td>
@@ -121,6 +124,7 @@
             <td>alberto.alencar@gmail.com</td>
             <td>28/02/1967</td>
             <td>mar/2012</td>
+            <td><a href="clientes-detalhes.html" class="btn btn-info">Detalhes</a></td>
           </tr>
           <tr>
             <td><a href="clientes-detalhes.html">000649</a></td>
@@ -128,6 +132,7 @@
             <td>brasileiro@gmail.com</td>
             <td>23/11/1978</td>
             <td>mai/2012</td>
+            <td><a href="clientes-detalhes.html" class="btn btn-info">Detalhes</a></td>
           </tr>
           <tr>
             <td><a href="clientes-detalhes.html">000567</a></td>
@@ -135,6 +140,7 @@
             <td>elizeu@gmail.com</td>
             <td>23/12/1986</td>
             <td>jun/2012</td>
+            <td><a href="clientes-detalhes.html" class="btn btn-info">Detalhes</a></td>
           </tr>
         </tbody>
 
@@ -148,8 +154,8 @@
 
     </div> <!-- /container -->
 
-    <script src="assets/js/jquery-1.9.0.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="/layout/assets/js/jquery-1.9.0.min.js"></script>
+    <script src="/layout/assets/js/bootstrap.min.js"></script>
 
   </body>
 </html>
