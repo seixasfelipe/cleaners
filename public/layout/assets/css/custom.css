@@ -1,0 +1,9 @@
+/*
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #ffd473;
+}
+*/
+.navbar .brand {
+	padding: 6px 20px 2px;
+}

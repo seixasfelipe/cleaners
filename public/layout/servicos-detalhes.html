@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cleaners Panamby 2013</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="home.html"><img src="assets/img/cleaners-logo-mini.jpg"/></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="home.html">Início</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serviços <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="servicos-novo.html">Novo</a></li>
+                  <li><a href="servicos-todos.html">Todos</a></li>
+                  <li><a href="servicos-agendamentos.html">Agendamentos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="clientes-novo.html">Novo</a></li>
+                  <li><a href="clientes-todos.html">Todos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resumo <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="resumo.html">Geral</a></li>
+                  <li><a href="resumo-financeiro.html">Financeiro</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h1>Detalhes do Serviço</h1>
+
+      <form class="form-horizontal">
+        <fieldset>
+          <legend></legend>
+          <div class="control-group">
+            <label class="control-label">Código interno</label>
+            <div class="controls">
+              <span class="span1 uneditable-input">000025</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Nome do Cliente</label>
+            <div class="controls">
+              <input type="text" placeholder="Nome do Cliente" value="Felipe Silva">
+            </div>
+          </div>
+
+          <hr> 
+
+          <div class="control-group">
+            <label class="control-label">Placa</label>
+            <div class="controls">
+              <input type="text" placeholder="Placa" value="EJH4320">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Detalhes do Automóvel</label>
+            <div class="controls controls-row">
+              <input type="text" placeholder="Marca" value="BMW" class="input-medium">
+              <input type="text" placeholder="Modelo" value="X5" class="input-medium">
+              <input type="text" placeholder="Cor" value="Branco" class="input-medium">
+            </div>
+          </div>
+
+          <hr>
+          
+          <div class="control-group">
+            <label class="control-label">Serviços</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" checked>Lavagem Básica
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">Resina
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" checked>Cêra
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">Lavagem Motor
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">Lavagem Chassi
+              </label>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Data de Entrada</label>
+            <div class="controls">
+              <input type="text" placeholder="20/01/2013 as 13:42h" value="20/01/2013 as 13:42h">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Data de Finalização</label>
+            <div class="controls">
+              <input type="text" placeholder="20/01/2013 as 14:20h" value="20/01/2013 as 14:20h">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Outras informações</label>
+            <div class="controls">
+              <textarea rows="3" placeholder="Outras informações"></textarea>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="control-group">
+            <label class="control-label">Total</label>
+            <div class="controls">
+              <span class="add-on">R$</span>
+              <input type="text" placeholder="70" value="70" class="input-mini">
+              <span class="add-on">,00</span>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-success">Finalizar</button>
+            <button type="submit" class="btn btn-primary">Alterar</button>
+            <button type="button" class="btn">Cancelar</button>
+          </div>
+        </fieldset>
+      </form>
+
+
+      <hr>
+
+      <footer>
+        <p>&copy; Cleaners 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="assets/js/jquery-1.9.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

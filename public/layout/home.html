@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cleaners Panamby 2013</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="home.html"><img src="assets/img/cleaners-logo-mini.jpg"/></a>
+          <p class="navbar-text pull-right">
+              Olá, Flávio (<a href="index.html" class="navbar-link">Sair</a>)
+            </p>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="home.html">Início</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serviços <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="servicos-novo.html">Novo</a></li>
+                  <li><a href="servicos-todos.html">Todos</a></li>
+                  <li><a href="servicos-agendamentos.html">Agendamentos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="clientes-novo.html">Novo</a></li>
+                  <li><a href="clientes-todos.html">Todos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resumo <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="resumo.html">Geral</a></li>
+                  <li><a href="resumo-financeiro.html">Financeiro</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h1>Atalhos</h1>
+
+      <form class="form-search">
+        <input type="text" class="input-medium search-query" placeholder="Placa">
+        <button type="submit" class="btn">Buscar</button>
+      </form>
+
+      <form class="form-search">
+        <input type="text" class="input-medium search-query" placeholder="Cliente">
+        <button type="submit" class="btn">Buscar</button>
+      </form>
+
+      <hr>
+
+      <h1>Serviços Abertos</h1>
+
+      <table class="table table-striped table-condensed table-hover">
+
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>placa</th>
+            <th>nome do cliente</th>
+            <th>serviços</th>
+            <th>data</th>
+            <th>tempo total</th>
+            <th>faturado?</th>
+            <th>pagamento</th>
+            <th></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+
+          <tr>
+            <td><a href="servicos-detalhes.html">000024</a></td>
+            <td>JHD9399</td>
+            <td>José Sousa</td>
+            <td>
+              <ul class="unstyled">
+                <li>lavagem básica</li>
+                <li>resina</li>
+              </ul>
+            </td>
+            <td>26/01/2013</td>
+            <td>00:43h</td>
+            <td>não</td>
+            <td>--</td>
+            <td><a href="servicos-finalizar.html" class="btn btn-primary">Finalizar</a></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Cleaners 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="assets/js/jquery-1.9.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

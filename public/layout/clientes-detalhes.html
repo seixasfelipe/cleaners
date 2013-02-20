@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cleaners Panamby 2013</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="home.html"><img src="assets/img/cleaners-logo-mini.jpg"/></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="home.html">Início</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serviços <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="servicos-novo.html">Novo</a></li>
+                  <li><a href="servicos-todos.html">Todos</a></li>
+                  <li><a href="servicos-agendamentos.html">Agendamentos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="clientes-novo.html">Novo</a></li>
+                  <li><a href="clientes-todos.html">Todos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resumo <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="resumo.html">Geral</a></li>
+                  <li><a href="resumo-financeiro.html">Financeiro</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h1>Detalhes do Cliente</h1>
+
+      <form class="form-horizontal">
+        <fieldset>
+          <legend></legend>
+
+          <div class="control-group">
+            <label class="control-label">Nome do Cliente</label>
+            <div class="controls">
+              <span class="uneditable-input">Felipe Silva</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Email</label>
+            <div class="controls">
+              <span class="uneditable-input">felipe@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Data de Nascimento</label>
+            <div class="controls">
+              <span class="uneditable-input">19/11/1970</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Telefone</label>
+            <div class="controls">
+              <span class="uneditable-input">(11) 5532-3434</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Celular</label>
+            <div class="controls">
+              <span class="uneditable-input">(11) 99234-2391</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Outras informações</label>
+            <div class="controls">
+              <span class="uneditable-input"></span>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Alterar</button>
+            <button type="button" class="btn">Cancelar</button>
+          </div>
+        </fieldset>
+      </form>
+
+
+      <h3>Automóveis cadastrados:</h3>
+
+      <table class="table table-striped table-condensed">
+
+        <thead>
+          <tr>
+            <th>placa</th>
+            <th>marca</th>
+            <th>modelo</th>
+            <th>cor</th>
+            <th></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td>EJH4320</td>
+            <td>BMW</td>
+            <td>X5</td>
+            <td>Branco</td>
+            <td><button type="submit" class="btn btn-danger">Remover</button></td>
+          </tr>
+          <tr>
+            <td>EFF1088</td>
+            <td>Porsche</td>
+            <td>Cayenne</td>
+            <td>Azul Marinho</td>
+            <td><button type="submit" class="btn btn-danger">Remover</button></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Placa" value=""></td>
+            <td><input type="text" placeholder="Marca" value="" class="input-medium"></td>
+            <td><input type="text" placeholder="Modelo" value="" class="input-medium"></td>
+            <td><input type="text" placeholder="Cor" value="" class="input-medium"></td>
+            <td><button type="submit" class="btn btn-primary">Inserir</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <footer>
+        <p>&copy; Cleaners 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="assets/js/jquery-1.9.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
