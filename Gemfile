@@ -4,8 +4,8 @@ gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'pg', :group => :production
-gem 'sqlite3', :groups => [:development, :test]
+gem 'pg', :groups => [:production, :development]
+gem 'sqlite3', :groups => [:test]
 
 # Gems used only for assets and not required
 # in production environments by default.
