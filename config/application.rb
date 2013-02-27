@@ -59,6 +59,11 @@ module CleanersPanamby
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # Forcing the application to not access the DB or
+    # load models when precompiling your assets.
+    # Needs only to deploy on Heroku.
+    config.assets.initialize_on_precompile = false
+
     # Customization which files will be created
     config.generators do |g|
       g.stylesheets false

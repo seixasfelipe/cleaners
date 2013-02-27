@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     ZenTest (4.9.0)
     actionmailer (3.2.12)
@@ -33,6 +33,7 @@ GEM
     arel (3.0.2)
     autotest-rails (4.1.2)
       ZenTest (~> 4.5)
+    bcrypt-ruby (3.0.1)
     builder (3.0.4)
     capybara (2.0.2)
       mime-types (>= 1.16)
@@ -51,6 +52,11 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     database_cleaner (0.9.1)
+    devise (2.2.3)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (~> 3.1)
+      warden (~> 1.2.1)
     diff-lcs (1.2.1)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -76,6 +82,7 @@ GEM
     mime-types (1.21)
     multi_json (1.6.0)
     nokogiri (1.5.6)
+    orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -104,6 +111,8 @@ GEM
     rake (10.0.3)
     rdoc (3.12.1)
       json (~> 1.4)
+    responders (0.9.3)
+      railties (~> 3.1)
     rspec-core (2.13.0)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -126,6 +135,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    simple_form (2.0.4)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -147,6 +159,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    warden (1.2.1)
+      rack (>= 1.0)
     websocket (1.0.7)
     xpath (1.0.0)
       nokogiri (~> 1.3)
@@ -159,12 +173,15 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 3.2.1)
   database_cleaner
+  devise
   factory_girl_rails
   jquery-rails
   pg
   rails (= 3.2.12)
+  responders
   rspec-rails
   sass-rails (~> 3.2.3)
+  simple_form
   sqlite3
   turn
   uglifier (>= 1.0.3)
