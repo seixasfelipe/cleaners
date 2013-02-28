@@ -1,8 +1,6 @@
 CleanersPanamby::Application.routes.draw do
-  get "tasks/index"
 
   get "login/index"
-
   get "home/index"
 
   # The priority is based upon order of creation:
@@ -20,6 +18,7 @@ CleanersPanamby::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :tasks
 
   # Sample resource route with options:
   #   resources :products do
