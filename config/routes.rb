@@ -1,4 +1,6 @@
 CleanersPanamby::Application.routes.draw do
+  get "tasks/index"
+
   get "login/index"
 
   get "home/index"
