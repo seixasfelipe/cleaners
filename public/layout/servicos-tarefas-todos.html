@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cleaners Panamby 2013</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/layout/assets/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
+    <link href="/layout/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/layout/assets/css/custom.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="/layout/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/layout/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/layout/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/layout/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/layout/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="/layout/assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="home.html"><img src="/layout/assets/img/cleaners-logo-mini.jpg"/></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="home.html">Início</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serviços <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="servicos-novo.html">Novo</a></li>
+                  <li><a href="servicos-todos.html">Todos</a></li>
+                  <!--<li><a href="servicos-agendamentos.html">Agendamentos</a></li>-->
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="clientes-novo.html">Novo</a></li>
+                  <li><a href="clientes-todos.html">Todos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resumo <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="resumo.html">Geral</a></li>
+                  <li><a href="resumo-financeiro.html">Financeiro</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h1>Todas as Tarefas</h1>
+
+      <hr>
+
+      <p></p>
+
+      <table class="table table-striped table-condensed table-hover">
+
+        <thead>
+          <tr>
+            <th>cod. interno</th>
+            <th>nome</th>
+            <th>preço</th>
+            <th></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+
+          <tr>
+            <td><a href="servicos-tarefas-detalhes.html">00147</a></td>
+            <td>Lavagem básica</td>
+            <td>R$ 20,00</td>
+            <td>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="servicos-tarefas-detalhes.html">00198</a></td>
+            <td>Resina</td>
+            <td>R$ 8,00</td>
+            <td>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="servicos-tarefas-detalhes.html">00148</a></td>
+            <td>Cêra</td>
+            <td>R$ 12,00</td>
+            <td>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="servicos-tarefas-detalhes.html">00493</a></td>
+            <td>Lavagem de motor</td>
+            <td>R$ 38,00</td>
+            <td>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="servicos-tarefas-detalhes.html">00494</a></td>
+            <td>Lavagem de chassi</td>
+            <td>R$ 50,00</td>
+            <td>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><input type="text" placeholder="Nome" value="" class="input-medium"></td>
+            <td><input type="text" placeholder="Preço R$" value="" class="input-medium"></td>
+            <td>
+              <a href="#" class="btn btn-primary">Inserir</a>
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Cleaners 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="/layout/assets/js/jquery-1.9.0.min.js"></script>
+    <script src="/layout/assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
