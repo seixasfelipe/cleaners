@@ -6,13 +6,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/layout/home.html"><%= image_tag "cleaners-logo-mini.jpg", :width => "50", :height => "31" %></a>
+          <a class="brand" href="/home"><%= image_tag "cleaners-logo-mini.jpg", :width => "50", :height => "31" %></a>
           <p class="navbar-text pull-right">
               Olá, Flávio (<a href="/" class="navbar-link">Sair</a>)
           </p>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="/layout/home.html">Início</a></li>
+              <li class="active"><a href="/home">Início</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serviços <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -46,34 +46,19 @@
 
     <div class="container">
 
-      <h1>Atalhos</h1>
-
-      <form class="form-search">
-        <input type="text" class="input-medium search-query" placeholder="Placa">
-        <button type="submit" class="btn">Buscar</button>
-      </form>
-
-      <form class="form-search">
-        <input type="text" class="input-medium search-query" placeholder="Cliente">
-        <button type="submit" class="btn">Buscar</button>
-      </form>
+      <h1>Todas as Tarefas</h1>
 
       <hr>
 
-      <h1>Serviços Abertos</h1>
+      <p></p>
 
       <table class="table table-striped table-condensed table-hover">
 
         <thead>
           <tr>
             <th>cod. interno</th>
-            <th>placa</th>
-            <th>nome do cliente</th>
-            <th>serviços</th>
-            <th>data</th>
-            <th>tempo total</th>
-            <th>faturado?</th>
-            <th>pagamento</th>
+            <th>nome</th>
+            <th>preço</th>
             <th></th>
           </tr>
         </thead>
@@ -81,21 +66,61 @@
         <tbody>
 
           <tr>
-            <td><a href="/layout/servicos-detalhes.html">000024</a></td>
-            <td>JHD9399</td>
-            <td>José Sousa</td>
+            <td><a href="servicos-tarefas-detalhes.html">00147</a></td>
+            <td>Lavagem básica</td>
+            <td>R$ 20,00</td>
             <td>
-              <ul class="unstyled">
-                <li>lavagem básica</li>
-                <li>resina</li>
-              </ul>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
             </td>
-            <td>26/01/2013</td>
-            <td>00:43h</td>
-            <td>não</td>
-            <td>--</td>
-            <td><a href="/layout/servicos-finalizar.html" class="btn btn-primary">Finalizar</a>
-              <a href="/layout/servicos-detalhes.html" class="btn btn-info">Detalhes</a>
+          </tr>
+
+          <tr>
+            <td><a href="servicos-tarefas-detalhes.html">00198</a></td>
+            <td>Resina</td>
+            <td>R$ 8,00</td>
+            <td>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="servicos-tarefas-detalhes.html">00148</a></td>
+            <td>Cêra</td>
+            <td>R$ 12,00</td>
+            <td>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="servicos-tarefas-detalhes.html">00493</a></td>
+            <td>Lavagem de motor</td>
+            <td>R$ 38,00</td>
+            <td>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="servicos-tarefas-detalhes.html">00494</a></td>
+            <td>Lavagem de chassi</td>
+            <td>R$ 50,00</td>
+            <td>
+              <a href="servicos-tarefas-editar.html" class="btn btn-warning">Editar</a>
+              <a href="#" class="btn btn-danger">Remover</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><input type="text" placeholder="Nome" value="" class="input-medium"></td>
+            <td><input type="text" placeholder="Preço R$" value="" class="input-medium"></td>
+            <td>
+              <a href="#" class="btn btn-primary">Inserir</a>
             </td>
           </tr>
 
