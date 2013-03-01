@@ -15,3 +15,11 @@
 //= require jquery-ui
 //= require vendor_application
 //= require_tree .
+
+$(function() {
+  $("input.datepicker").datepicker({
+      altFormat: "dd-mm-yy",
+      dateFormat: "dd/mm/yy",
+      altField: $(this).next()
+    });
+});
