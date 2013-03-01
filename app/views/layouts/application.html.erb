@@ -18,8 +18,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice hide"><%= notice %></p>
-<p class="alert hide"><%= alert %></p>
+
+<%= render "messages" %>
+
 <%= yield %>
 
 
