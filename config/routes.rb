@@ -1,13 +1,15 @@
 CleanersPanamby::Application.routes.draw do
 
-  get "login/index"
-  get "home/index"
+  scope "(:locale)", :locale => /en|pt|pt-BR/ do
+
+    get "login/index"
+    get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  match 'home' => 'home#index'
-  match 'login' => 'login#index'
+    match 'home' => 'home#index'
+    match 'login' => 'login#index'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -18,8 +20,12 @@ CleanersPanamby::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :tasks
-  resources :customers
+    resources :tasks
+    resources :customers
+  end
+
+      # maps /pt-BR, /en...
+    match '/:locale' => 'login#index'
 
   # Sample resource route with options:
   #   resources :products do

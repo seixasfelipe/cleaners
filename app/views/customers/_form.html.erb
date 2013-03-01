@@ -3,7 +3,7 @@
     <% if @customer.errors.any? %>
     <div class="alert alert-error fade in">
       <button type="button" class="close" data-dismiss="alert">&#215;</button>
-      <strong>Oops!</strong> O formulário possui <%= pluralize(@customer.errors.count, "campo") %> com problemas:</h2>
+      <strong>Ooops!</strong> <%=t 'errors.template.body', :count => @customer.errors.count %>
       <ul>
       <% @customer.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
