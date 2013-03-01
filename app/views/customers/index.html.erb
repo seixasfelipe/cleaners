@@ -34,8 +34,8 @@
             <td><%= link_to "%03d" % c.id, edit_customer_path(c.id) %></td>
             <td><%= c.name %></td>
             <td><%= c.email %></td>
-            <td><%= c.birth_date %></td>
-            <td><%= c.created_at %></td>
+            <td><% unless c.birth_date.nil? %><%= c.birth_date.to_s(:ddmmyyyy) %><% end %></td>
+            <td><%= c.created_at.to_s(:ddmmyyyy) %></td>
             <td><a href="clientes-detalhes.html" class="btn btn-info">Detalhes</a>
           </tr>
           <% end %>
