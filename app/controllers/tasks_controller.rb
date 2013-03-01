@@ -13,7 +13,7 @@ class TasksController < ApplicationController
 
   	respond_to do |format|
   		format.html
-  		format.json { render :json => @post }
+  		format.json { render :json => @task }
   	end
   end
 
@@ -32,5 +32,16 @@ class TasksController < ApplicationController
   		                :status => :unprocessable_entity }
   		end
   	end
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+   
+    respond_to do |format|
+      format.html { redirect_to tasks_url,
+                    :notice => 'Tarefa "%s" removida com sucesso.' % @task.name }
+      format.json { head :no_content }
+    end
   end
 end
