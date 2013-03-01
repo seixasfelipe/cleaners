@@ -1,4 +1,4 @@
-<%= form_for(@task, :html => { :class => "form-horizontal"}) do |f| %>
+<%= simple_form_for(@task, html: { class: "form-horizontal"}) do |f| %>
   <fieldset>
     <% if @task.errors.any? %>
     <div class="alert alert-error fade in">
@@ -13,24 +13,15 @@
     <% end %>
 
     <legend>Preencha as informações</legend>
-    
-    <div class="control-group">
-      <%= f.label :name, :class => "control-label" %>
-      <div class="controls">
-        <%= f.text_field :name, :placeholder => "Nome" %>
-      </div>
-    </div>
 
-    <div class="control-group">
-      <%= f.label :price, :class => "control-label" %>
-      <div class="controls">
-        <%= f.text_field :price, :placeholder => "Preço R$" %>
-      </div>
+    <div class="form-inputs">
+      <%= f.input :name, placeholder: t(".name"), autofocus: true %>
+      <%= f.input :price, as: :currency, placeholder: t(".price") %>
     </div>
 
     <div class="form-actions">
-      <%= f.submit 'Gravar', :class => "btn btn-primary" %>
-      <%= link_to 'Cancelar', tasks_path, :class => "btn" %>
+      <%= f.button :submit, 'Gravar', class: "btn btn-primary" %>
+      <%= link_to 'Cancelar', tasks_path, class: "btn" %>
     </div>
   </fieldset>
 <% end %>
