@@ -34,6 +34,26 @@ class TasksController < ApplicationController
   	end
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+   
+    respond_to do |format|
+      if @task.update_attributes(params[:task])
+        format.html  { redirect_to(tasks_url,
+                      :notice => 'Tarefa atualizada com sucesso.') }
+        format.json  { head :no_content }
+      else
+        format.html  { render :action => "edit" }
+        format.json  { render :json => @task.errors,
+                      :status => :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
