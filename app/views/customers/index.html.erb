@@ -1,0 +1,55 @@
+    <%= render "menu" %>
+
+    <div class="container">
+
+      <h1>Todos os Clientes</h1>
+
+      <hr>
+
+      <form class="form-search">
+        <input type="text" class="input-large search-query" placeholder="Código, nome ou email">
+        <button type="submit" class="btn">Buscar</button>
+        <%= link_to 'Inserir novo', new_customer_path, :class => "btn btn-primary" %>
+      </form>
+
+      <p></p>
+
+      <table class="table table-striped table-condensed table-hover">
+
+        <thead>
+          <tr>
+            <th>cod. interno</th>
+            <th>nome do cliente</th>
+            <th>email</th>
+            <th>data de nascimento</th>
+            <th>cliente desde</th>
+            <th></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+
+          <% @customers.each do |c| %>
+          <tr>
+            <td><%= link_to "%03d" % c.id, edit_customer_path(c.id) %></td>
+            <td><%= c.name %></td>
+            <td><%= c.email %></td>
+            <td><%= c.birth_date %></td>
+            <td><%= c.created_at %></td>
+            <td><a href="clientes-detalhes.html" class="btn btn-info">Detalhes</a>
+          </tr>
+          <% end %>
+          <% unless @customers.count > 0 %>
+            <tr><td colspan="6">Nenhum registro encontrado.</td></tr>
+          <% end %>
+        </tbody>
+
+      </table>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Cleaners 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
