@@ -7,4 +7,30 @@ class TasksController < ApplicationController
   		format.json { render :json => @tasks }
   	end
   end
+
+  def new
+  	@task = Task.new
+
+  	respond_to do |format|
+  		format.html
+  		format.json { render :json => @post }
+  	end
+  end
+
+  def create
+  	@task = Task.new(params[:task])
+ 
+  	respond_to do |format|
+  		if @task.save
+  		  format.html  { redirect_to(tasks_url,
+  		                :notice => 'Tarefa criada com sucesso.') }
+  		  format.json  { render :json => @task,
+  		                :status => :created, :location => @task }
+  		else
+  		  format.html  { render :action => "new" }
+  		  format.json  { render :json => @task.errors,
+  		                :status => :unprocessable_entity }
+  		end
+  	end
+  end
 end
