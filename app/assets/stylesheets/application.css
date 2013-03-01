@@ -12,3 +12,15 @@
  *= require vendor_application
  *= require_tree .
  */
+
+body {
+  padding-top: 60px;
+}
+
+table td.action, table th.action {
+  opacity : 0;
+}
+
+table tr:hover .action{
+  opacity : 1;
+}
