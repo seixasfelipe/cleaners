@@ -1,4 +1,4 @@
-<%- if controller_name != 'sessions' %>
+<%- unless ['sessions', 'login'].include?( controller_name ) %>
   <%= link_to "Sign in", new_session_path(resource_name) %><br />
 <% end -%>
 
