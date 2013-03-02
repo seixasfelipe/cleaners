@@ -1,45 +1,59 @@
- <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="<%= home_path %>"><%= image_tag "cleaners-logo-mini.jpg", :width => "50", :height => "31" %></a>
-          <p class="navbar-text pull-right">
-              Olá, Flávio (<%= link_to 'Sair', root_path, :class => 'navbar-link' %>)
-          </p>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><%= link_to 'Início', home_path %></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serviços <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="/layout/servicos-novo.html">Novo</a></li>
-                  <li><a href="/layout/servicos-todos.html">Todos</a></li>
-                  <!--<li><a href="/layout/servicos-agendamentos.html">Agendamentos</a></li>-->
-                  <!--li class="divider"></li>
-                  <li class="nav-header">Tarefas</li-->
-                  <li><%= link_to 'Listar Tarefas', tasks_path %></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="/layout/clientes-novo.html">Novo</a></li>
-                  <li><%= link_to 'Listar Clientes', customers_path %></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resumo <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="/layout/resumo.html">Geral</a></li>
-                  <li><a href="/layout/resumo-financeiro.html">Financeiro</a></li>
-                </ul>
-              </li>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="<%= home_path %>"><%= image_tag "cleaners-logo-mini.jpg", :width => "50", :height => "31" %></a>
+      <p class="navbar-text pull-right">
+          Olá, Flávio (<%= link_to 'Sair', root_path, :class => 'navbar-link' %>)
+      </p>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active"><%= link_to 'Início', home_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serviços <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/layout/servicos-novo.html">Novo</a></li>
+              <li><a href="/layout/servicos-todos.html">Todos</a></li>
+              <!--<li><a href="/layout/servicos-agendamentos.html">Agendamentos</a></li>-->
+              <!--li class="divider"></li>
+              <li class="nav-header">Tarefas</li-->
+              <li><%= link_to 'Listar Tarefas', tasks_path %></li>
             </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/layout/clientes-novo.html">Novo</a></li>
+              <li><%= link_to 'Listar Clientes', customers_path %></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resumo <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/layout/resumo.html">Geral</a></li>
+              <li><a href="/layout/resumo-financeiro.html">Financeiro</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/layout/clientes-novo.html">Novo</a></li>
+              <li><%= link_to 'Listar Clientes', customers_path %></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resumo <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/layout/resumo.html">Geral</a></li>
+              <li><a href="/layout/resumo-financeiro.html">Financeiro</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
+  </div>
+</div>

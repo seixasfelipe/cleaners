@@ -1,68 +1,62 @@
-    <%= render "menu" %>
+<div class="container">
 
-    <div class="container">
+  <h1>Atalhos</h1>
 
-      <h1>Atalhos</h1>
+  <form class="form-search">
+    <input type="text" class="input-medium search-query" placeholder="Placa">
+    <button type="submit" class="btn">Buscar</button>
+  </form>
 
-      <form class="form-search">
-        <input type="text" class="input-medium search-query" placeholder="Placa">
-        <button type="submit" class="btn">Buscar</button>
-      </form>
+  <form class="form-search">
+    <input type="text" class="input-medium search-query" placeholder="Cliente">
+    <button type="submit" class="btn">Buscar</button>
+  </form>
 
-      <form class="form-search">
-        <input type="text" class="input-medium search-query" placeholder="Cliente">
-        <button type="submit" class="btn">Buscar</button>
-      </form>
+  <hr>
 
-      <hr>
+  <h1>Serviços Abertos</h1>
 
-      <h1>Serviços Abertos</h1>
+  <table class="table table-striped table-condensed table-hover">
 
-      <table class="table table-striped table-condensed table-hover">
+    <thead>
+      <tr>
+        <th>cod. interno</th>
+        <th>placa</th>
+        <th>nome do cliente</th>
+        <th>serviços</th>
+        <th>data</th>
+        <th>tempo total</th>
+        <th>faturado?</th>
+        <th>pagamento</th>
+        <th></th>
+      </tr>
+    </thead>
 
-        <thead>
-          <tr>
-            <th>cod. interno</th>
-            <th>placa</th>
-            <th>nome do cliente</th>
-            <th>serviços</th>
-            <th>data</th>
-            <th>tempo total</th>
-            <th>faturado?</th>
-            <th>pagamento</th>
-            <th></th>
-          </tr>
-        </thead>
-        
-        <tbody>
+    <tbody>
 
-          <tr>
-            <td><a href="/layout/servicos-detalhes.html">000024</a></td>
-            <td>JHD9399</td>
-            <td>José Sousa</td>
-            <td>
-              <ul class="unstyled">
-                <li>lavagem básica</li>
-                <li>resina</li>
-              </ul>
-            </td>
-            <td>26/01/2013</td>
-            <td>00:43h</td>
-            <td>não</td>
-            <td>--</td>
-            <td><a href="/layout/servicos-finalizar.html" class="btn btn-primary">Finalizar</a>
-              <a href="/layout/servicos-detalhes.html" class="btn btn-info">Detalhes</a>
-            </td>
-          </tr>
+      <tr>
+        <td><a href="/layout/servicos-detalhes.html">000024</a></td>
+        <td>JHD9399</td>
+        <td>José Sousa</td>
+        <td>
+          <ul class="unstyled">
+            <li>lavagem básica</li>
+            <li>resina</li>
+          </ul>
+        </td>
+        <td>26/01/2013</td>
+        <td>00:43h</td>
+        <td>não</td>
+        <td>--</td>
+        <td><a href="/layout/servicos-finalizar.html" class="btn btn-primary">Finalizar</a>
+          <a href="/layout/servicos-detalhes.html" class="btn btn-info">Detalhes</a>
+        </td>
+      </tr>
 
-        </tbody>
+    </tbody>
 
-      </table>
+  </table>
 
-      <hr>
+  <hr>
 
-      <footer>
-        <p>&copy; Cleaners 2013</p>
-      </footer>
-
-    </div> <!-- /container -->
+</div> <!-- /container -->
