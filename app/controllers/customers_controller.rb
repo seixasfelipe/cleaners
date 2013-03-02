@@ -17,4 +17,24 @@ class CustomersController < ApplicationController
 
     respond_with @customer
   end
+
+  def edit
+    @customer = Customer.find(params[:id])
+
+    respond_with @customer
+  end
+
+  def update
+    @customer = Customer.find(params[:id])
+    @customer.update_attributes(params[:customer])
+   
+    respond_with @customer
+  end
+
+  def destroy
+    @customer = Customer.find(params[:id])
+    @customer.destroy
+   
+    respond_with @customer
+  end
 end
