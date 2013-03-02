@@ -222,12 +222,15 @@
         even: "deve ser par"
 
     activerecord:
+      models:
+        task: "Tarefa"
+        customer: "Cliente"
       attributes:
         customer:
           name: "Nome"
           email: "E-mail"
           mobile_number: "Celular"
-          birth_date: "Nascimento"
+          birth_date: "Data de Nascimento"
         task:
           name: "Nome"
           price: "Preço"
@@ -248,8 +251,8 @@
 
     message:
       was_successfully:
-        created: "%{resource} '%{resource_name}' foi criado com sucesso."
-        updated: "%{resource} '%{resource_name}' foi atualizado com sucesso."
+        created: "%{resource} '%{resource_name}' foi criado(a) com sucesso."
+        updated: "%{resource} '%{resource_name}' foi atualizado(a) com sucesso."
 
     customers:
       index:
