@@ -208,6 +208,9 @@ en:
         even: "must be even"
 
     activerecord:
+      models:
+        task: "Task"
+        customer: "Customer"
       attributes:
         customer:
           name: "Name"
