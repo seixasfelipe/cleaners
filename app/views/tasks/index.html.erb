@@ -21,7 +21,7 @@
       <tr>
         <td><%= link_to "%03d" % task.id, edit_task_path(task.id) %></td>
         <td><%= task.name %></td>
-        <td><%= number_to_currency(task.price, :unit => "R$ ", :separator => ",", :delimiter => ".") %></td>
+        <td><%= number_to_currency(task.price) %></td>
         <td>
           <%= link_to 'Editar', edit_task_path(task.id), :class => "btn btn-warning" %>
           <%= link_to 'Remover', task_path(task.id), :class => "btn btn-danger", :method => :delete %>
