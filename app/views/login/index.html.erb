@@ -35,13 +35,16 @@
 <div class="container">
   <%= image_tag "cleaners-logo-resized.jpg", style: "margin-left: auto; margin-right: auto; display: block" %>
 
-      <form class="form-signin" action="home.html" method="post">
-        <div class="control-group">
-          <div class="controls controls-row">
-            <input type="text" class="" placeholder="Email">
-            <input type="password" class="" placeholder="Senha">
-            <%= link_to 'Entrar', home_path, :class => "btn btn-large btn-primary" %>
-          </div>
-        </div>
-      </form>
+  <%= simple_form_for(resource,
+                      as: resource_name,
+                      wrapper: :login,
+                      url: session_path(resource_name) ) do |f| %>
+
+    <%= f.input :login, required: true, label: false, autofocus: true, placeholder: 'Login' %>
+    <%= f.input :password, required: true, label: false, placeholder: 'Password' %>
+      <%= f.button :submit, "Sign in", class: "btn primary" %>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
 </div> <!-- /container -->
