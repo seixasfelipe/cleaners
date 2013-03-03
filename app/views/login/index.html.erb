@@ -6,17 +6,17 @@
   }
 
   .form-signin {
-    max-width: 300px;
+    max-width: 226px;
     padding: 19px 29px 29px;
     margin: 0 auto 20px;
     /*background-color: #fff;*/
     /*border: 1px solid #e5e5e5;*/
-    -webkit-border-radius: 5px;
+    /*-webkit-border-radius: 5px;
        -moz-border-radius: 5px;
-            border-radius: 5px;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            border-radius: 5px;*/
+    /*-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);*/
   }
   .form-signin .form-signin-heading,
   .form-signin .checkbox {
@@ -26,8 +26,16 @@
   .form-signin input[type="password"] {
     font-size: 16px;
     height: auto;
-    margin-bottom: 15px;
-    padding: 7px 9px;
+    margin-bottom: 10px;
+    padding: 5px 9px;
+  }
+
+  .form-signin .control-group .actions a{
+    float: left;
+  }
+
+  .form-signin .control-group .actions input{
+    float: right;
   }
 
 </style>
@@ -38,13 +46,23 @@
   <%= simple_form_for(resource,
                       as: resource_name,
                       wrapper: :login,
-                      url: session_path(resource_name) ) do |f| %>
-
-    <%= f.input :login, required: true, label: false, autofocus: true, placeholder: 'Login' %>
-    <%= f.input :password, required: true, label: false, placeholder: 'Password' %>
-      <%= f.button :submit, "Sign in", class: "btn primary" %>
+                      url: session_path(resource_name),
+                      html: { class: "form-signin"}) do |f| %>
+        <div class="control-group">
+          <div class="controls">
+            <%= f.input :login, required: true, label: false, autofocus: true, placeholder: 'Usuário' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <%= f.input :password, required: true, label: false, placeholder: 'Senha' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls actions">
+            <%= f.button :submit, "Entrar", class: "btn btn-primary" %>
+            <%= render "devise/shared/links" %>
+          </div>
+        </div>
   <% end %>
-
-  <%= render "devise/shared/links" %>
-
-</div> <!-- /container -->
+</div>
