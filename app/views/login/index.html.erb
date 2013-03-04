@@ -30,11 +30,11 @@
     padding: 5px 9px;
   }
 
-  .form-signin .control-group .actions a{
+  .form-signin .actions a{
     float: left;
   }
 
-  .form-signin .control-group .actions input{
+  .form-signin .actions input{
     float: right;
   }
 
@@ -48,21 +48,11 @@
                       wrapper: :login,
                       url: session_path(resource_name),
                       html: { class: "form-signin"}) do |f| %>
-        <div class="control-group">
-          <div class="controls">
-            <%= f.input :login, required: true, label: false, autofocus: true, placeholder: 'Usuário' %>
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="controls">
-            <%= f.input :password, required: true, label: false, placeholder: 'Senha' %>
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="controls actions">
-            <%= f.button :submit, "Entrar", class: "btn btn-primary" %>
-            <%= render "devise/shared/links" %>
-          </div>
+        <%= f.input :login, required: true, label: false, autofocus: true, placeholder: 'Usuário' %>
+        <%= f.input :password, required: true, label: false, placeholder: 'Senha' %>
+        <div class="actions">
+          <%= f.button :submit, "Entrar", class: "btn-primary" %>
+          <%= render "devise/shared/links" %>
         </div>
   <% end %>
 </div>
