@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   validates :username,
             :presence => true,
-            :length => { :within => 5..20 },
+            :length => { :within => 2..20 },
             :uniqueness => { :case_sensitive => false },
             :format => /^[a-zA-Z0-9_]*[a-zA-Z][a-zA-Z0-9_]*$/,
             :allow_blank => true
