@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :customer do
-    name "MyString"
-    email "MyString"
-    birth_date ""
-    mobile_number "MyString"
+    name { FactoryGirl.generate :name }
+    email { FactoryGirl.generate :email }
+    birth_date DateTime.new
+    mobile_number "555-5555"
   end
 end
