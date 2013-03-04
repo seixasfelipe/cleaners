@@ -37,10 +37,10 @@ SimpleForm.setup do |config|
     end
   end
 
-  config.wrappers :login, :class => 'clearfix', :error_class => 'error' do |b|
+  config.wrappers :login, :class => 'control-group', :error_class => 'error' do |b|
     b.use :placeholder
     b.use :label
-    b.wrapper :tag => 'div' do |ba|
+    b.wrapper :tag => 'div', :class => 'controls' do |ba|
       ba.use :input
       ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
       ba.use :hint,  :wrap_with => { :tag => 'span', :class => 'help-block' }
