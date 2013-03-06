@@ -4,7 +4,7 @@ feature "Signing up" do
 
   scenario "with valid params" do
     visit root_path
-    click_link 'Sign up'
+    click_link 'Criar usuario'
     expect(current_path).to eq new_user_registration_path
     within("#new_user") do
       fill_in 'First name', with: 'First name'
@@ -13,7 +13,7 @@ feature "Signing up" do
       fill_in 'Email', with: 'user@name.com'
       fill_in 'Password', with: '12345678'
       fill_in 'Password confirmation', with: '12345678'
-      click_link_or_button 'Sign up'
+      click_link_or_button 'Criar usuario'
     end
     expect(current_path).to eq root_path
     expect(page).to have_content "Bem vindo!"
@@ -22,10 +22,10 @@ feature "Signing up" do
 
   scenario "with invalid params" do
     visit root_path
-    click_link 'Sign up'
+    click_link 'Criar usuario'
     expect(current_path).to eq new_user_registration_path
     within("#new_user") do
-      click_link_or_button 'Sign up'
+      click_link_or_button 'Criar usuario'
     end
     expect(current_path).to eq user_registration_path
     expect(page).to have_content "Por favor, verifique os problemas abaixo"
