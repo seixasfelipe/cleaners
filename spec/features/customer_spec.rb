@@ -44,7 +44,7 @@ feature "Navigating on customer views and" do
 
     expect(page).to have_content "Editar Cliente"
     fill_in customer_form_name, with: 'Customer Modified'
-    click_link_or_button 'Gravar'
+    click_link_or_button I18n.t(:save)
 
     page.has_selector?("table#customers tbody tr", :count => 1)
     expect(page).to have_content "Customer Modified"
@@ -78,7 +78,7 @@ feature "Navigating on customer views and" do
     within("#new_customer") do
       fill_in customer_form_name, with: 'Customer name'
       fill_in I18n.t("customers.form.email"), with: 'customer@test.com'
-      click_link_or_button 'Gravar'
+      click_link_or_button I18n.t(:save)
     end
     expect(page).to have_content "Cliente cadastrado(a) com sucesso."
   end
