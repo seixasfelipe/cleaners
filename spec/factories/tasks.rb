@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :task do
-    name "MyString"
+    name { FactoryGirl.generate :name }
     price 1.5
   end
 end
