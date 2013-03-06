@@ -48,7 +48,7 @@
                       wrapper: :login,
                       url: session_path(resource_name),
                       html: { class: "form-signin"}) do |f| %>
-        <%= f.input :login, required: true, label: false, autofocus: true, placeholder: 'Usuário' %>
+        <%= f.input :login, required: true, label: false, autofocus: true, placeholder: 'Usuario' %>
         <%= f.input :password, required: true, label: false, placeholder: 'Senha' %>
         <div class="actions">
           <%= f.button :submit, "Entrar", class: "btn-primary" %>
