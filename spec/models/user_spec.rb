@@ -41,8 +41,8 @@ describe User do
 
       describe "having characteres" do
         describe "in downcase" do
-          it "like 'username' with its length less than 5" do
-            user.username= 'abcd'
+          it "like 'username' with its length less than 2" do
+            user.username= 'a'
             expect(user).not_to be_valid
             expect(user).to have(1).errors_on(:username)
           end
@@ -79,8 +79,8 @@ describe User do
         end
 
         describe "in uppercase" do
-          it "like 'username' with its length less than 5" do
-            user.username= 'ABCD'
+          it "like 'username' with its length less than 2" do
+            user.username= 'A'
             expect(user).not_to be_valid
             expect(user).to have(1).errors_on(:username)
           end
