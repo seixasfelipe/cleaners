@@ -4,6 +4,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rspec'
+require 'database_cleaner'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -27,15 +28,13 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.clean_with(:truncation)
   end
 
   config.before(:each) do
-    Capybara.reset_sessions!
     DatabaseCleaner.start
   end
 
