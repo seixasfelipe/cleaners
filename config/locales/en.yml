@@ -182,6 +182,7 @@ en:
         create: 'Create %{model}'
         update: 'Update %{model}'
         submit: 'Save %{model}'
+        save: 'Save'
 
     errors:
       format: "%{attribute} %{message}"
