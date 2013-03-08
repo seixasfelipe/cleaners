@@ -33,7 +33,7 @@ module ApplicationHelper
     content_tag(:li, class: "dropdown #{option}") do
       concat(
         content_tag(:a, href: "#", class: "dropdown-toggle", :"data-toggle" => "dropdown") do
-          output =  "Servicos <b class='caret'></b>"
+          output =  "Tarefas <b class='caret'></b>"
           output.html_safe
         end
       )
