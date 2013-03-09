@@ -16,7 +16,7 @@ feature "Signing up" do
       click_link_or_button I18n.t('helpers.links.create_user')
     end
     expect(current_path).to eq root_path
-    #expect(page).to have_content "Bem vindo!"
+    expect(page).to have_content I18n.t('devise.registrations.signed_up')
     #expect(page).to have_text "Atalhos"
   end
 
