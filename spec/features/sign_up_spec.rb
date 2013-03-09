@@ -17,7 +17,7 @@ feature "Signing up" do
     end
     expect(current_path).to eq root_path
     expect(page).to have_content I18n.t('devise.registrations.signed_up')
-    #expect(page).to have_text "Atalhos"
+    expect(page).to have_text I18n.t('helpers.header.shortcuts')
   end
 
   scenario "with invalid params" do
