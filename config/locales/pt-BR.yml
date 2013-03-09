@@ -193,6 +193,8 @@
         save: 'Salvar'
       links:
         create_user: 'Criar usuário'
+      header:
+        shortcuts: 'Atalhos'
         
     errors:
       format: "%{attribute} %{message}"
