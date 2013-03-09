@@ -183,6 +183,8 @@ en:
         update: 'Update %{model}'
         submit: 'Save %{model}'
         save: 'Save'
+      links:
+        create_user: 'Create User'
 
     errors:
       format: "%{attribute} %{message}"

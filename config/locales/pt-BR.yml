@@ -191,7 +191,9 @@
         update: 'Atualizar %{model}'
         submit: 'Salvar %{model}'
         save: 'Salvar'
-
+      links:
+        create_user: 'Criar usuário'
+        
     errors:
       format: "%{attribute} %{message}"
 
