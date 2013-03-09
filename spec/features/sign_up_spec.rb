@@ -28,7 +28,7 @@ feature "Signing up" do
       click_link_or_button I18n.t('helpers.links.create_user')
     end
     expect(current_path).to eq user_registration_path
-    #expect(page).to have_content "Por favor, verifique os problemas abaixo"
+    expect(page).to have_content I18n.t('simple_form.error_notification.default_message')
   end
 
 end
