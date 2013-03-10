@@ -11,8 +11,26 @@
           Olá, <%= current_user.first_name %> (<%= link_to 'Sair', logout_path, class: 'navbar-link' %>)
       </p>
       <div class="nav-collapse collapse">
-        <%= navigation_links %>
         <ul class="nav">
+          <li class="active"><%= link_to 'Início', home_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicos <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/layout/servicos-novo.html">Novo</a></li>
+              <li><a href="/layout/servicos-todos.html">Todos</a></li>
+              <!--<li><a href="/layout/servicos-agendamentos.html">Agendamentos</a></li>-->
+              <!--li class="divider"></li>
+              <li class="nav-header">Tarefas</li-->
+              <li><%= link_to 'Listar Tarefas', tasks_path %></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/layout/clientes-novo.html">Novo</a></li>
+              <li><%= link_to 'Listar Clientes', customers_path %></li>
+            </ul>
+          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resumo <b class="caret"></b></a>
             <ul class="dropdown-menu">
