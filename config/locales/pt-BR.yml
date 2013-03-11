@@ -190,12 +190,16 @@
         create: 'Criar %{model}'
         update: 'Atualizar %{model}'
         submit: 'Salvar %{model}'
+        list: 'Listar %{model}'
         save: 'Salvar'
+        edit: 'Editar'
+        remove: 'Remover'
       links:
         create_user: 'Criar usuário'
       header:
         shortcuts: 'Atalhos'
-        
+        edit_model: 'Editar %{model}'
+                
     errors:
       format: "%{attribute} %{message}"
 
@@ -225,6 +229,7 @@
         less_than_or_equal_to: "deve ser menor ou igual a %{count}"
         odd: "deve ser ímpar"
         even: "deve ser par"
+        record_not_found: "Nenhum registro encontrado"
 
     activerecord:
       models:
