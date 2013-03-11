@@ -182,11 +182,15 @@ en:
         create: 'Create %{model}'
         update: 'Update %{model}'
         submit: 'Save %{model}'
+        list: 'List %{model}'
         save: 'Save'
+        edit: 'Edit'
+        remove: 'Remove'
       links:
         create_user: 'Create User'
       header:
         shortcuts: 'Shortcuts'
+        edit_model: 'Edit %{model}'
 
     errors:
       format: "%{attribute} %{message}"
@@ -211,6 +215,7 @@ en:
         less_than_or_equal_to: "must be less than or equal to %{count}"
         odd: "must be odd"
         even: "must be even"
+        record_not_found: "Record not found"
 
     activerecord:
       models:
