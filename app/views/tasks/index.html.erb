@@ -23,8 +23,8 @@
         <td><%= task.name %></td>
         <td><%= number_to_currency(task.price) %></td>
         <td>
-          <%= link_to 'Editar', edit_task_path(task.id), :class => "btn btn-warning" %>
-          <%= link_to 'Remover', task_path(task.id), :class => "btn btn-danger", :method => :delete %>
+          <%= link_to t('helpers.submit.edit'), edit_task_path(task.id), :class => "btn btn-warning" %>
+          <%= link_to t('helpers.submit.remove'), task_path(task.id), :class => "btn btn-danger", :method => :delete %>
         </td>
       </tr>
       <% end %>
@@ -34,7 +34,7 @@
         <td><input type="text" placeholder="Nome" value="" class="input-medium"></td>
         <td><input type="text" placeholder="Preço R$" value="" class="input-medium"></td>
         <td>
-          <%= link_to 'Inserir', new_task_path, :class => "btn btn-primary" %>
+          <%= link_to t('helpers.submit.create'), new_task_path, :class => "btn btn-primary" %>
         </td>
       </tr>
 
