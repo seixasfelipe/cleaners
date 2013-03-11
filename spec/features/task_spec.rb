@@ -63,7 +63,6 @@ feature "Navigating on task views and" do
   private
 
   def task_index_path
-    click_link_or_button 'Servicos'
     click_link_or_button 'Listar Tarefas'
     expect(page).to have_link "Inserir"
   end
