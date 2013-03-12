@@ -1,11 +1,11 @@
-<%= simple_form_for(@task, html: { class: "form-horizontal"}) do |f| %>
+<%= simple_form_for(@item, html: { class: "form-horizontal"}) do |f| %>
   <fieldset>
-    <% if @task.errors.any? %>
+    <% if @item.errors.any? %>
     <div class="alert alert-error fade in">
       <button type="button" class="close" data-dismiss="alert">&#215;</button>
-      <strong>Oops!</strong>  <%= t 'errors.template.body', :count => @task.errors.count %>
+      <strong>Oops!</strong>  <%= t 'errors.template.body', :count => @item.errors.count %>
       <ul>
-      <% @task.errors.full_messages.each do |msg| %>
+      <% @item.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -18,13 +18,13 @@
       <%= f.input :name, placeholder: t(".name"), autofocus: true %>
       <%= f.input :price, :wrapper => :prepend, :label => t(".price") do %>
         <%= content_tag :span, t("number.currency.format.unit"), :class => "add-on" %>
-        <%= f.input_field :price, value: number_to_currency(@task.price, unit: "") %>
+        <%= f.input_field :price, value: number_to_currency(@item.price, unit: "") %>
       <% end %>
     </div>
 
     <div class="form-actions">
       <%= f.button :submit, t('helpers.submit.save'), class: "btn btn-primary" %>
-      <%= link_to 'Cancelar', tasks_path, class: "btn" %>
+      <%= link_to 'Cancelar', items_path, class: "btn" %>
     </div>
   </fieldset>
 <% end %>
