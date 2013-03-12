@@ -16,7 +16,7 @@ CleanersPanamby::Application.routes.draw do
     match 'home' => 'home#index'
     match 'login' => 'login#index'
 
-    resources :tasks
+    resources :items
     resources :customers
   end
 

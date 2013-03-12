@@ -198,8 +198,9 @@
         create_user: 'Criar usuário'
       header:
         shortcuts: 'Atalhos'
+        new_model: 'Novo(a) %{model}'
         edit_model: 'Editar %{model}'
-                
+
     errors:
       format: "%{attribute} %{message}"
 
@@ -233,7 +234,7 @@
 
     activerecord:
       models:
-        task: "Tarefa"
+        item: "Item"
         customer: "Cliente"
       attributes:
         customer:
@@ -241,7 +242,7 @@
           email: "E-mail"
           mobile_number: "Celular"
           birth_date: "Data de Nascimento"
-        task:
+        item:
           name: "Nome"
           price: "Preço"
       errors:
@@ -277,7 +278,7 @@
         mobile_number: "Celular"
         birth_date: "Nascimento"
 
-    tasks:
+    items:
       index:
         id: "Id"
         name: "Nome"
