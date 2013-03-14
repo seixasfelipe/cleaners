@@ -68,7 +68,7 @@ feature "Navigating on customer views and" do
   private
 
   def customer_index_path
-    click_link_or_button I18n.t('helpers.submit.list')
+    click_link_or_button I18n.t('helpers.submit.list', :model => I18n.t('activerecord.models.customer'))
     expect(page).to have_link "Inserir novo"
   end
 
