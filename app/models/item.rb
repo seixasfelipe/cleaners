@@ -1,4 +1,4 @@
-class Task < ActiveRecord::Base
+class Item < ActiveRecord::Base
   attr_accessible :name, :price, :active
 
   scope :actives,  where(active: true)

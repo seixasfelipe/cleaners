@@ -17,8 +17,8 @@ module ApplicationHelper
     options = params[:controller] == "home" ? { class: "active" } : {}
     links << content_tag(:li, link_to("Inicio", home_path), options).html_safe
 
-    options = params[:controller] == "tasks" ? { class: "active" } : {}
-    links << task_dropdown_menu(options).html_safe
+    options = params[:controller] == "items" ? { class: "active" } : {}
+    links << item_dropdown_menu(options).html_safe
 
     options = params[:controller] == "customers" ? { class: "active" } : {}
     links << customer_dropdown_menu(options).html_safe
@@ -28,7 +28,7 @@ module ApplicationHelper
 
   private
 
-  def task_dropdown_menu(options = {})
+  def item_dropdown_menu(options = {})
     option = options[:class] unless options.empty?
     content_tag(:li, class: "dropdown #{option}") do
       concat(
@@ -39,8 +39,8 @@ module ApplicationHelper
       )
       concat(
         content_tag(:ul, class: "dropdown-menu") do
-          concat(content_tag(:li, link_to("Novo", new_task_path)).html_safe)
-          concat(content_tag(:li, link_to("Listar Tarefas", tasks_path)).html_safe)
+          concat(content_tag(:li, link_to("Novo", new_item_path)).html_safe)
+          concat(content_tag(:li, link_to("Listar Tarefas", items_path)).html_safe)
         end
       )
     end
