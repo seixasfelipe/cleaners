@@ -190,6 +190,7 @@ en:
         create_user: 'Create User'
       header:
         shortcuts: 'Shortcuts'
+        new_model: 'New %{model}'
         edit_model: 'Edit %{model}'
 
     errors:
@@ -219,7 +220,7 @@ en:
 
     activerecord:
       models:
-        task: "Task"
+        item: "Item"
         customer: "Customer"
       attributes:
         customer:
@@ -227,7 +228,7 @@ en:
           email: "Email"
           mobile_number: "Mobile Number"
           birth_date: "Birth Date"
-        task:
+        item:
           name: "Name"
           price: "Price"
       errors:
@@ -263,7 +264,7 @@ en:
         mobile_number: "Mobile"
         birth_date: "Birth"
 
-    tasks:
+    items:
       index:
         id: "Id"
         name: "Name"
