@@ -5,7 +5,7 @@ feature "Navigating on task views and" do
   background do
     user = FactoryGirl.create(:user)
     login user.username, user.password
-    expect(page).to have_content I18n.t('devise.sessions.signed_in')
+    expect(page).to have_content t('devise.sessions.signed_in')
   end
 
   scenario "listing no results" do
@@ -20,8 +20,8 @@ feature "Navigating on task views and" do
   scenario "listing one result" do
     new_created_task
     page.has_selector?("table#tasks tbody tr", :count => 1)
-    expect(page).to have_link I18n.t('helpers.submit.edit')
-    expect(page).to have_link I18n.t('helpers.submit.remove')
+    expect(page).to have_link t('helpers.submit.edit')
+    expect(page).to have_link t('helpers.submit.remove')
   end
 
   scenario "listing five results" do
@@ -35,13 +35,13 @@ feature "Navigating on task views and" do
     new_created_task
 
     page.has_selector?("table#tasks tbody tr", :count => 1)
-    expect(page).to have_link I18n.t('helpers.submit.edit')
+    expect(page).to have_link t('helpers.submit.edit')
 
-    click_link_or_button I18n.t('helpers.submit.edit')
+    click_link_or_button t('helpers.submit.edit')
 
-    expect(page).to have_content I18n.t('helpers.header.edit_model')
+    expect(page).to have_content t('helpers.header.edit_model')
     fill_in task_form_name, with: 'Task Modified'
-    click_link_or_button I18n.t('helpers.submit.save')
+    click_link_or_button t('helpers.submit.save')
 
     page.has_selector?("table#tasks tbody tr", :count => 1)
     expect(page).to have_content "Task Modified"
@@ -51,11 +51,11 @@ feature "Navigating on task views and" do
     new_created_task
 
     page.has_selector?("table#tasks tbody tr", :count => 1)
-    expect(page).to have_link I18n.t('helpers.submit.remove')
+    expect(page).to have_link t('helpers.submit.remove')
 
-    click_link_or_button I18n.t('helpers.submit.remove')
+    click_link_or_button t('helpers.submit.remove')
 
-    expect(page).to have_content I18n.t('flash.actions.destroy.notice', :resource_name => I18n.t('activerecord.models.task'))
+    expect(page).to have_content t('flash.actions.destroy.notice', :resource_name => t('activerecord.models.task'))
 
     page.has_selector?("table#tasks tbody tr", :count => 0)
   end
@@ -63,22 +63,22 @@ feature "Navigating on task views and" do
   private
 
   def task_index_path
-    click_link_or_button I18n.t('helpers.submit.list', :model => I18n.t('activerecord.models.task'))
-    expect(page).to have_link I18n.t('helpers.submit.create')
+    click_link_or_button t('helpers.submit.list', :model => t('activerecord.models.task'))
+    expect(page).to have_link t('helpers.submit.create')
   end
 
   def new_created_task
     task_index_path
-    click_link_or_button I18n.t('helpers.submit.create')
+    click_link_or_button t('helpers.submit.create')
     within("#new_task") do
       fill_in task_form_name, with: 'Task name'
-      fill_in I18n.t("tasks.form.price"), with: 1.5
-      click_link_or_button I18n.t('helpers.submit.save')
+      fill_in t("tasks.form.price"), with: 1.5
+      click_link_or_button t('helpers.submit.save')
     end
-    expect(page).to have_content I18n.t('flash.actions.create.notice', :resource_name => I18n.t('activerecord.models.task'))
+    expect(page).to have_content t('flash.actions.create.notice', :resource_name => t('activerecord.models.task'))
   end
 
   def task_form_name
-    I18n.t("tasks.form.name")
+    t("tasks.form.name")
   end
 end
