@@ -63,7 +63,7 @@ feature "Navigating on task views and" do
   private
 
   def task_index_path
-    click_link_or_button 'Listar Tarefas'
+    click_link_or_button I18n.t('helpers.submit.list', :model => I18n.t('activerecord.models.task'))
     expect(page).to have_link I18n.t('helpers.submit.create')
   end
 
