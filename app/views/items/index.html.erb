@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1>Todas as Tarefas</h1>
+  <h1>Todos os Itens</h1>
 
   <hr>
 
@@ -17,14 +17,14 @@
 
     <tbody>
 
-      <% @tasks.each do |task| %>
+      <% @items.each do |item| %>
       <tr>
-        <td><%= link_to "%03d" % task.id, edit_task_path(task.id) %></td>
-        <td><%= task.name %></td>
-        <td><%= number_to_currency(task.price) %></td>
+        <td><%= link_to "%03d" % item.id, edit_item_path(item.id) %></td>
+        <td><%= item.name %></td>
+        <td><%= number_to_currency(item.price) %></td>
         <td>
-          <%= link_to t('helpers.submit.edit'), edit_task_path(task.id), :class => "btn btn-warning" %>
-          <%= link_to t('helpers.submit.remove'), task_path(task.id), :class => "btn btn-danger", :method => :delete %>
+          <%= link_to t('helpers.submit.edit'), edit_item_path(item.id), :class => "btn btn-warning" %>
+          <%= link_to t('helpers.submit.remove'), item_path(item.id), :class => "btn btn-danger", :method => :delete %>
         </td>
       </tr>
       <% end %>
@@ -34,7 +34,7 @@
         <td><input type="text" placeholder="Nome" value="" class="input-medium"></td>
         <td><input type="text" placeholder="Preço R$" value="" class="input-medium"></td>
         <td>
-          <%= link_to t('helpers.submit.create'), new_task_path, :class => "btn btn-primary" %>
+          <%= link_to t('helpers.submit.create'), new_item_path, :class => "btn btn-primary" %>
         </td>
       </tr>
 
