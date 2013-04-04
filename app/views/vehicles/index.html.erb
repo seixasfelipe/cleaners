@@ -1,0 +1,50 @@
+<div class="container">
+
+  <h1>Todos os Veículos</h1>
+
+  <hr>
+
+  <form class="form-search">
+    <input type="text" class="input-large search-query" placeholder="<%= t('.id') %>, <%= t('.license_plate') %> ou <%= t('.model') %>" >
+    <button type="submit" class="btn">Buscar</button>
+    <%= link_to t('helpers.submit.create', model: t('activerecord.models.vehicle')), new_vehicle_path, :class => "btn btn-primary" %>
+  </form>
+
+  <p></p>
+
+  <table class="table table-striped table-condensed table-hover">
+
+    <thead>
+      <tr>
+        <th><%= t ".id" %></th>
+        <th><%= t ".license_plate" %></th>
+        <th><%= t ".model" %></th>
+        <th><%= t ".color" %></th>
+        <th><%= t ".brand" %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% @vehicles.each do |m| %>
+      <tr>
+        <td><%= link_to "%03d" % m.id, edit_vehicle_path(m.id) %></td>
+        <td><%= m.license_plate %></td>
+        <td><%= m.model %></td>
+        <td><%= m.color %></td>
+        <td><%= m.brand %></td>
+        <td><%= link_to 'Editar', edit_vehicle_path(m.id), :class => "btn btn-warning" %>
+          <%= link_to 'Remover', vehicle_path(m.id), :class => "btn btn-danger", :method => :delete %>
+        </td>
+      </tr>
+      <% end %>
+      <% unless @vehicles.count > 0 %>
+        <tr><td colspan="6"><%=t('errors.messages.record_not_found')%></td></tr>
+      <% end %>
+    </tbody>
+
+  </table>
+
+  <hr>
+</div> <!-- /container -->
