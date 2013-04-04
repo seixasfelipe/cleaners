@@ -236,6 +236,7 @@
       models:
         item: "Item"
         customer: "Cliente"
+        vehicle: "Veículo"
       attributes:
         customer:
           name: "Nome"
@@ -245,6 +246,11 @@
         item:
           name: "Nome"
           price: "Preço"
+        vehicle:
+          license_plate: "Placa"
+          model: "Modelo"
+          color: "Cor"
+          brand: "Marca"
       errors:
         template:
           header:
