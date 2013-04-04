@@ -52,4 +52,17 @@ ActiveRecord::Schema.define(:version => 20130312112324) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
   add_index "users", ["username"], :name => "index_users_on_username", :unique => true
 
+  create_table "vehicles", :force => true do |t|
+    t.string   "license_plate"
+    t.string   "model"
+    t.string   "color"
+    t.string   "brand"
+    t.integer  "customer_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "vehicles", ["customer_id"], :name => "index_vehicles_on_customer_id"
+  add_index "vehicles", ["license_plate"], :name => "index_vehicles_on_license_plate"
+
 end
