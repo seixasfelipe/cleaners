@@ -36,6 +36,7 @@
         <td><%=l c.created_at.to_date %></td>
         <td><%= link_to 'Editar', edit_customer_path(c.id), :class => "btn btn-warning" %>
           <%= link_to 'Remover', customer_path(c.id), :class => "btn btn-danger", :method => :delete %>
+        </td>
       </tr>
       <% end %>
       <% unless @customers.count > 0 %>
