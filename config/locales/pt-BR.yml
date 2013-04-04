@@ -194,6 +194,7 @@
         save: 'Salvar'
         edit: 'Editar'
         remove: 'Remover'
+        cancel: 'Cancelar'
       links:
         create_user: 'Criar usuário'
       header:
@@ -292,3 +293,16 @@
       form:
         name: "Nome"
         price: "Preço"
+
+    vehicles:
+      index: 
+        id: "Id"
+        license_plate: "Placa"
+        brand: "Marca"
+        model: "Modelo"
+        color: "Cor"
+      form:
+        license_plate: "Placa"
+        brand: "Marca"
+        model: "Modelo"
+        color: "Cor"
