@@ -39,7 +39,7 @@ feature "Navigating on item views and" do
 
     click_link_or_button t('helpers.submit.edit')
 
-    expect(page).to have_content t('helpers.header.edit_model')
+    expect(page).to have_content t('helpers.header.edit_model', model: t('activerecord.models.item'))
     fill_in item_form_name, with: 'item Modified'
     click_link_or_button t('helpers.submit.save')
 
