@@ -192,6 +192,7 @@ en:
         shortcuts: 'Shortcuts'
         new_model: 'New %{model}'
         edit_model: 'Edit %{model}'
+        fill_information: 'Fill with information'
 
     errors:
       format: "%{attribute} %{message}"
