@@ -34,8 +34,8 @@
         <td><%= m.model %></td>
         <td><%= m.color %></td>
         <td><%= m.brand %></td>
-        <td><%= link_to 'Editar', edit_vehicle_path(m.id), :class => "btn btn-warning" %>
-          <%= link_to 'Remover', vehicle_path(m.id), :class => "btn btn-danger", :method => :delete %>
+        <td><%= link_to t('helpers.submit.edit'), edit_vehicle_path(m.id), :class => "btn btn-warning" %>
+          <%= link_to t('helpers.submit.remove'), vehicle_path(m.id), :class => "btn btn-danger", :method => :delete %>
         </td>
       </tr>
       <% end %>
