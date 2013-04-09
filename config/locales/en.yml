@@ -192,6 +192,7 @@ en:
         shortcuts: 'Shortcuts'
         new_model: 'New %{model}'
         edit_model: 'Edit %{model}'
+        fill_information: 'Fill with information'
 
     errors:
       format: "%{attribute} %{message}"
@@ -222,6 +223,7 @@ en:
       models:
         item: "Item"
         customer: "Customer"
+        vehicle: "Vehicle"
       attributes:
         customer:
           name: "Name"
@@ -231,6 +233,11 @@ en:
         item:
           name: "Name"
           price: "Price"
+        vehicle:
+          license_plate: "License"
+          model: "Model"
+          color: "Color"
+          brand: "Brand"    
       errors:
         template:
           header:
@@ -272,3 +279,15 @@ en:
       form:
         name: "Name"
         price: "Price"
+    vehicles:
+      index: 
+        id: "Id"
+        license_plate: "License"
+        brand: "Brand"
+        model: "Model"
+        color: "Color"
+      form:
+        license_plate: "License"
+        brand: "Brand"
+        model: "Model"
+        color: "Color"
