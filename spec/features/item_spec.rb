@@ -64,12 +64,12 @@ feature "Navigating on item views and" do
 
   def item_index_path
     click_link_or_button t('helpers.submit.list', :model => t('activerecord.models.item'))
-    expect(page).to have_link t('helpers.submit.create')
+    expect(page).to have_link t('helpers.submit.create', model: t('activerecord.models.item'))
   end
 
   def new_created_item
     item_index_path
-    click_link_or_button t('helpers.submit.create')
+    click_link_or_button t('helpers.submit.create', model: t('activerecord.models.item'))
     within("#new_item") do
       fill_in item_form_name, with: 'item name'
       fill_in I18n.t("items.form.price"), with: 1.5
