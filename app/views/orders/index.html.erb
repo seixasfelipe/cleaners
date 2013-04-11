@@ -1,0 +1,48 @@
+<div class="container">
+
+  <h1>Todos os Serviços</h1>
+
+  <hr>
+
+  <form class="form-search">
+    <input type="text" class="input-large search-query" placeholder="<%= t('.id') %>" >
+    <button type="submit" class="btn">Buscar</button>
+    <%= link_to t('helpers.submit.create', model: t('activerecord.models.order')), new_order_path, :class => "btn btn-primary" %>
+  </form>
+
+  <p></p>
+
+  <table class="table table-striped table-condensed table-hover">
+
+    <thead>
+      <tr>
+        <th><%= t ".id" %></th>
+        <th><%= t ".order_date" %></th>
+        <th><%= t ".value" %></th>
+        <th><%= t ".closed" %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% @orders.each do |m| %>
+      <tr>
+        <td><%= link_to "%03d" % m.id, edit_order_path(m.id) %></td>
+        <td><%= m.order_date.to_date %></td>
+        <td><%= m.value %></td>
+        <td><%= m.closed %></td>
+        <td><%= link_to t('helpers.submit.edit'), edit_order_path(m.id), :class => "btn btn-warning" %>
+          <%= link_to t('helpers.submit.remove'), order_path(m.id), :class => "btn btn-danger", :method => :delete %>
+        </td>
+      </tr>
+      <% end %>
+      <% unless @orders.count > 0 %>
+        <tr><td colspan="6"><%=t('errors.messages.record_not_found')%></td></tr>
+      <% end %>
+    </tbody>
+
+  </table>
+
+  <hr>
+</div> <!-- /container -->

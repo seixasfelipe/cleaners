@@ -19,6 +19,7 @@ CleanersPanamby::Application.routes.draw do
     resources :items
     resources :customers
     resources :vehicles
+    resources :orders
   end
 
   # maps /pt-BR, /en...

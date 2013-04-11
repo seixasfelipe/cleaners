@@ -17,7 +17,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicos <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="/layout/servicos-novo.html">Novo</a></li>
-              <li><a href="/layout/servicos-todos.html">Todos</a></li>
+              <li><%= link_to t('helpers.submit.list', :model => t('activerecord.models.order')), orders_path %></li>
               <!--<li><a href="/layout/servicos-agendamentos.html">Agendamentos</a></li>-->
               <!--li class="divider"></li>
               <li class="nav-header">Itens</li-->
