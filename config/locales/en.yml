@@ -224,6 +224,7 @@ en:
         item: "Item"
         customer: "Customer"
         vehicle: "Vehicle"
+        order: "Order"
       attributes:
         customer:
           name: "Name"
@@ -237,7 +238,11 @@ en:
           license_plate: "License"
           model: "Model"
           color: "Color"
-          brand: "Brand"    
+          brand: "Brand"
+        order:
+          order_date: "Date"
+          closed: "Status"
+          value: "Total"
       errors:
         template:
           header:
@@ -291,3 +296,12 @@ en:
         brand: "Brand"
         model: "Model"
         color: "Color"
+
+    orders:
+      index:
+        id: "Id"
+        order_date: "Date"
+        value: "Total"
+        closed: "Status"
+      form:
+        order_date: "Date"

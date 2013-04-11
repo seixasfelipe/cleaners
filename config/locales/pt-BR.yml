@@ -239,6 +239,7 @@
         item: "Item"
         customer: "Cliente"
         vehicle: "Veículo"
+        order: "Serviço"
       attributes:
         customer:
           name: "Nome"
@@ -253,6 +254,10 @@
           model: "Modelo"
           color: "Cor"
           brand: "Marca"
+        order:
+          order_date: "Data"
+          closed: "Status"
+          value: "Total"
       errors:
         template:
           header:
@@ -307,3 +312,12 @@
         brand: "Marca"
         model: "Modelo"
         color: "Cor"
+
+    orders:
+      index:
+        id: "Id"
+        order_date: "Data"
+        value: "Total"
+        closed: "Status"
+      form:
+        order_date: "Data"
