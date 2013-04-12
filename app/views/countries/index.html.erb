@@ -1,0 +1,47 @@
+<div class="container">
+
+  <h1>Todos os Países</h1>
+
+  <hr>
+
+  <table class="table table-striped table-condensed table-hover">
+
+    <thead>
+      <tr>
+        <th><%= t ".id" %></th>
+        <th><%= t ".name" %></th>
+        <th><%= t ".abbreviation" %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% @countries.each do |country| %>
+      <tr>
+        <td><%= link_to "%03d" % country.id, edit_country_path(country.id) %></td>
+        <td><%= country.name %></td>
+        <td><%= country.abbreviation %></td>
+        <td>
+          <%= link_to t('helpers.submit.edit'), edit_country_path(country.id), :class => "btn btn-warning" %>
+          <%= link_to t('helpers.submit.remove'), country_path(country.id), :class => "btn btn-danger", :method => :delete %>
+        </td>
+      </tr>
+      <% end %>
+
+      <tr>
+        <td></td>
+        <td><input type="text" placeholder="Nome" value="" class="input-medium"></td>
+        <td><input type="text" placeholder="Sigla" value="" class="input-medium"></td>
+        <td>
+          <%= link_to t('helpers.submit.create', model: t('activerecord.models.country')), new_country_path, :class => "btn btn-primary" %>
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <hr>
+
+</div> <!-- /container -->

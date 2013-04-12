@@ -201,7 +201,7 @@
         shortcuts: 'Atalhos'
         new_model: 'Novo(a) %{model}'
         edit_model: 'Editar %{model}'
-        fill_information: 'Preencha as informações'    
+        fill_information: 'Preencha as informações'
 
     errors:
       format: "%{attribute} %{message}"
@@ -239,12 +239,16 @@
         item: "Item"
         customer: "Cliente"
         vehicle: "Veículo"
+        country: "País"
+        state: "Estado"
+        address: "Endereço"
       attributes:
         customer:
           name: "Nome"
           email: "E-mail"
           mobile_number: "Celular"
           birth_date: "Data de Nascimento"
+          address: "Endereço"
         item:
           name: "Nome"
           price: "Preço"
@@ -253,6 +257,19 @@
           model: "Modelo"
           color: "Cor"
           brand: "Marca"
+        country:
+          name: "Nome"
+          abbreviation: "Sigla"
+        state:
+          name: "Nome"
+          abbreviation: "Sigla"
+          country: "País"
+        address:
+          state: "Estado"
+          street: "Logradouro"
+          district: "Bairro"
+          city: "Cidade"
+          zip_code: "CEP"
       errors:
         template:
           header:
@@ -285,6 +302,7 @@
         email: "E-mail"
         mobile_number: "Celular"
         birth_date: "Nascimento"
+        address: "Endereço"
 
     items:
       index:
@@ -296,7 +314,7 @@
         price: "Preço"
 
     vehicles:
-      index: 
+      index:
         id: "Id"
         license_plate: "Placa"
         brand: "Marca"
@@ -307,3 +325,39 @@
         brand: "Marca"
         model: "Modelo"
         color: "Cor"
+
+    countries:
+      index:
+        id: "Id"
+        name: "Nome"
+        abbreviation: "Sigla"
+      form:
+        name: "Nome"
+        abbreviation: "Sigla"
+
+    states:
+      index:
+        id: "Id"
+        name: "Nome"
+        abbreviation: "Sigla"
+        country: "País"
+      form:
+        name: "Nome"
+        abbreviation: "Sigla"
+        country: "País"
+
+    addresses:
+      index:
+        state: "Estado"
+        street: "Logradouro"
+        district: "Bairro"
+        city: "Cidade"
+        zip_code: "CEP"
+      form:
+        state: "Estado"
+        choose_state: "Escolha um estado"
+        street: "Logradouro"
+        district: "Bairro"
+        city: "Cidade"
+        zip_code: "CEP"
+
