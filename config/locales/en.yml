@@ -237,7 +237,7 @@ en:
           license_plate: "License"
           model: "Model"
           color: "Color"
-          brand: "Brand"    
+          brand: "Brand"
       errors:
         template:
           header:
@@ -279,8 +279,9 @@ en:
       form:
         name: "Name"
         price: "Price"
+
     vehicles:
-      index: 
+      index:
         id: "Id"
         license_plate: "License"
         brand: "Brand"
@@ -291,3 +292,38 @@ en:
         brand: "Brand"
         model: "Model"
         color: "Color"
+
+    countries:
+      index:
+        id: "Id"
+        name: "Name"
+        abbreviation: "Abbreviation"
+      form:
+        name: "Name"
+        abbreviation: "Abbreviation"
+
+    states:
+      index:
+        id: "Id"
+        name: "Name"
+        abbreviation: "Abbreviation"
+        country: "Country"
+      form:
+        name: "Name"
+        abbreviation: "Abbreviation"
+        country: "Country"
+
+    addresses:
+      index:
+        state: "State"
+        street: "Street"
+        district: "District"
+        city: "City"
+        zip_code: "Zip Code"
+      form:
+        state: "State"
+        choose_state: "Choose a state"
+        street: "Street"
+        district: "District"
+        city: "City"
+        zip_code: "Zip Code"
