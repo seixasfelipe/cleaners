@@ -14,7 +14,9 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(params[:order])
 
-    @order.vehicle_id = 5
+    if(params[:vehicle_id])
+      @order.vehicle_id = Vehicle.find(params[:vehicle_id])
+    end
 
     @order.save
 
