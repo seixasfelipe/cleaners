@@ -21,18 +21,18 @@ class OrdersController < ApplicationController
     respond_with @order
   end
 
-  # def edit
-  #   @order = Order.find(params[:id])
+  def edit
+    @order = Order.find(params[:id])
 
-  #   respond_with @order
-  # end
+    respond_with @order
+  end
 
-  # def update
-  #   @order = Order.find(params[:id])
-  #   @order.update_attributes(params[:order])
+  def update
+    @order = Order.find(params[:id])
+    @order.update_attributes(params[:order])
    
-  #   respond_with @order
-  # end
+    respond_with @order
+  end
 
   def destroy
     @order = Order.find(params[:id])
