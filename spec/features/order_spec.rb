@@ -28,18 +28,18 @@ feature "Navigating on order views and" do
     expect(page).not_to have_content t('helpers.errors.not_found')
   end
 
-  # scenario "editing one result" do
-  #   create_new_order
+  scenario "editing one result" do
+    create_new_order
 
-  #   click_link_or_button t('helpers.submit.edit')
+    click_link_or_button t('helpers.submit.edit')
 
-  #   expect(page).to have_content t('helpers.header.edit_model', model: t('activerecord.models.order'))
-  #   fill_in t('orders.form.order_date'), with: '21/01/2013'
-  #   click_link_or_button t('helpers.submit.save')
+    expect(page).to have_content t('helpers.header.edit_model', model: t('activerecord.models.order'))
+    fill_in t('orders.form.order_date'), with: '21/01/2013'
+    click_link_or_button t('helpers.submit.save')
 
-  #   expect(page).to have_content "21/01/2033"
-  #   expect(page).not_to have_content t('helpers.errors.not_found')
-  # end
+    expect(page).to have_content "21/01/2033"
+    expect(page).not_to have_content t('helpers.errors.not_found')
+  end
 
   scenario "removing one result" do
     create_new_order
