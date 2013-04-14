@@ -22,6 +22,7 @@ feature "Navigating on order views and" do
   # test doesn't work (indifferent condition page.has_selector)
   scenario "listing one result" do
     create_new_order
+    order_index_path
     page.has_selector?("table#orders tbody tr", :count => 1)
     expect(page).to have_link t('helpers.submit.edit')
     expect(page).to have_link t('helpers.submit.remove')
@@ -30,7 +31,7 @@ feature "Navigating on order views and" do
 
   scenario "editing one result" do
     create_new_order
-
+    order_index_path
     click_link_or_button t('helpers.submit.edit')
 
     expect(page).to have_content t('helpers.header.edit_model', model: t('activerecord.models.order'))
