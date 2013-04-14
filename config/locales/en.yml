@@ -305,3 +305,4 @@ en:
         closed: "Status"
       form:
         order_date: "Date"
+        vehicle: "Vehicle"
