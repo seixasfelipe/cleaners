@@ -21,11 +21,11 @@ describe Order do
       expect(order).to have(1).errors_on(:order_date)
     end
 
-    # it "as #vehicle" do
-    #   order.vehicle = nil
-    #   expect(order).not_to be_valid
-    #   expect(order).to have(1).errors_on(:vehicle)
-    # end
+    it "as #vehicle" do
+      order.vehicle = nil
+      expect(order).not_to be_valid
+      expect(order).to have(1).errors_on(:vehicle)
+    end
 
     it "as #closed" do
       order.closed = nil
