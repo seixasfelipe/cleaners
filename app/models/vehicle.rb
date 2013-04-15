@@ -4,5 +4,4 @@ class Vehicle < ActiveRecord::Base
   validates :license_plate, :presence => true
 
   belongs_to :customer
-  belongs_to :order
 end
