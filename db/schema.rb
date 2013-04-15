@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130312112324) do
+ActiveRecord::Schema.define(:version => 20130412121748) do
+
+  create_table "addresses", :force => true do |t|
+    t.string   "street"
+    t.string   "district"
+    t.string   "city"
+    t.string   "zip_code"
+    t.integer  "state_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "addresses", ["state_id"], :name => "index_addresses_on_state_id"
+
+  create_table "countries", :force => true do |t|
+    t.string   "name"
+    t.string   "abbreviation"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -20,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20130312112324) do
     t.string   "mobile_number"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "address_id"
   end
 
   create_table "items", :force => true do |t|
@@ -28,6 +48,14 @@ ActiveRecord::Schema.define(:version => 20130312112324) do
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
     t.boolean  "active",     :default => true, :null => false
+  end
+
+  create_table "states", :force => true do |t|
+    t.string   "name"
+    t.string   "abbreviation"
+    t.integer  "country_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|

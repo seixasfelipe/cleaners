@@ -19,6 +19,10 @@
       <%= f.input :email, placeholder: t(".email") %>
       <%= f.input :birth_date, as: :datepicker, placeholder: t(".birth_date"), class: "date" %>
       <%= f.input :mobile_number, placeholder: t(".mobile_number") %>
+      <h5><%= t(".address") %></h5>
+      <%= f.simple_fields_for :address do |a| %>
+        <%= render 'addresses/form', f: a %>
+      <% end %>
     </div>
 
     <div class="form-actions">
