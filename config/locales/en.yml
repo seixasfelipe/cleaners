@@ -224,6 +224,8 @@ en:
         item: "Item"
         customer: "Customer"
         vehicle: "Vehicle"
+        state: "State"
+        country: "Country"
       attributes:
         customer:
           name: "Name"
