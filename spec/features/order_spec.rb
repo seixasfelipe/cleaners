@@ -67,9 +67,11 @@ feature "Navigating on order views and" do
   def create_new_order
     order_index_path
     click_link_or_button t('helpers.submit.create', model: t('activerecord.models.order'))
+
+    vehicle = FactoryGirl.create(:vehicle)
     within("#new_order") do
       fill_in t('orders.form.order_date'), with: '20/01/2013'
-      fill_in t('orders.form.vehicle_id'), with: :vehicle
+      fill_in t('orders.form.vehicle_id'), with: vehicle.id
       click_link_or_button t('helpers.submit.save')
     end
     expect(page).to have_content t('flash.actions.create.notice', :resource_name => t('activerecord.models.order'))

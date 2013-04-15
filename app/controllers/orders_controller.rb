@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(params[:order])
 
-    @order.vehicle = Vehicle.find(params[:vehicle_id])
+    @order.vehicle = Vehicle.find(@order.vehicle_id)
     
     @order.save
 
