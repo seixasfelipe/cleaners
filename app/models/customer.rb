@@ -4,4 +4,5 @@ class Customer < ActiveRecord::Base
   validates_presence_of :name, :email
 
   has_many :vehicles
+  has_many :orders
 end
