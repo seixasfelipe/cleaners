@@ -5,5 +5,7 @@ class Order < ActiveRecord::Base
 
   validates_inclusion_of :closed, :in => [true, false]
 
-  has_one :vehicle
+  belongs_to :customer
+  belongs_to :vehicle
+  
 end
