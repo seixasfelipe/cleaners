@@ -192,6 +192,7 @@ en:
         shortcuts: 'Shortcuts'
         new_model: 'New %{model}'
         edit_model: 'Edit %{model}'
+        all_model: 'All %{model}s'
         fill_information: 'Fill with information'
 
     errors:
