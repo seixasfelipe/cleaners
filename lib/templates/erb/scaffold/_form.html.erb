@@ -1,13 +1,24 @@
 <%%= simple_form_for(@<%= singular_table_name %>) do |f| %>
-  <%%= f.error_notification %>
+	<%% if @<%=singular_table_name%>.errors.any? %>
+	<div class="alert alert-error fade in">
+		<button type="button" class="close" data-dismiss="alert">&#215;</button>
+		<strong>Ooops!</strong> <%%=t 'errors.template.body', :count => @<%=singular_table_name%>.errors.count %>
+		<ul>
+			<%% @<%=singular_table_name%>.errors.full_messages.each do |msg| %>
+			<li><%%= msg %></li>
+			<%% end %>
+		</ul>
+	</div>
+	<%% end %>
 
   <div class="form-inputs">
   <%- attributes.each do |attribute| -%>
-    <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %> %>
+    <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>, placeholder: t('.<%=attribute.name%>')  %>
   <%- end -%>
   </div>
 
   <div class="form-actions">
-    <%%= f.button :submit %>
+    <%%= f.button :submit, t('helpers.submit.save'), class: "btn btn-primary" %>
+    <%%= link_to t('helpers.submit.cancel'), <%=singular_table_name%>_path, class: "btn" %>
   </div>
 <%% end %>
