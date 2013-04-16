@@ -1,5 +1,14 @@
 CleanersPanamby::Application.routes.draw do
 
+  resources :addresses
+
+
+  resources :states
+
+
+  resources :countries
+
+
   devise_for :users
 
   devise_scope :user do
