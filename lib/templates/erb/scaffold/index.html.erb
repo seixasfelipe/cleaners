@@ -1,0 +1,31 @@
+<h1><%%=t('helpers.header.all_model', model: t('activerecord.models.<%= plural_table_name%>'))%></h1>
+
+<table>
+  <thead>
+    <tr>
+<% attributes.each do |attribute| -%>
+      <th><%%= t('.<%= attribute.human_name %>')%></th>
+<% end -%>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+    <tr>
+<% attributes.each do |attribute| -%>
+      <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+<% end -%>
+      <td><%%= link_to t('helpers.submit.edit'), edit_<%= singular_table_name %>_path(<%= singular_table_name %>) :class => "btn btn-warning"%>
+      <%%= link_to t('helpers.submit.remove'), <%= singular_table_name %>, :class => "btn btn-danger" :method => :delete%></td>
+    </tr>
+    <%% end %>
+	<%% unless @<%= plural_table_name%>.count > 0 %>
+        <tr><td colspan="6"><%%=t('errors.messages.record_not_found')%></td></tr>
+    <%% end %>
+  </tbody>
+</table>
+
+<br />
