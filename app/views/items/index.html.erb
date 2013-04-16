@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1>Todos os Itens</h1>
+  <h1><%=t('helpers.header.all_model', model: t('activerecord.models.item'))%></h1>
 
   <hr>
 
@@ -34,7 +34,7 @@
         <td><input type="text" placeholder="Nome" value="" class="input-medium"></td>
         <td><input type="text" placeholder="Preço R$" value="" class="input-medium"></td>
         <td>
-          <%= link_to t('helpers.submit.create'), new_item_path, :class => "btn btn-primary" %>
+          <%= link_to t('helpers.submit.create', model: t('activerecord.models.item')), new_item_path, :class => "btn btn-primary" %>
         </td>
       </tr>
 
