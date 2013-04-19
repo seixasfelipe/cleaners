@@ -29,19 +29,6 @@ feature "Navigating on order views and" do
     expect(page).not_to have_content t('helpers.errors.not_found')
   end
 
-  scenario "editing one result" do
-    create_new_order
-    order_index_path
-    click_link_or_button t('helpers.submit.edit')
-
-    expect(page).to have_content t('helpers.header.edit_model', model: t('activerecord.models.order'))
-    fill_in t('orders.form.order_date'), with: '21/01/2013'
-    click_link_or_button t('helpers.submit.save')
-
-    expect(page).to have_content "21/01/2033"
-    expect(page).not_to have_content t('helpers.errors.not_found')
-  end
-
   scenario "removing one result" do
     create_new_order
 
@@ -65,16 +52,13 @@ feature "Navigating on order views and" do
   end
 
   def create_new_order
-    order_index_path
-
     vehicle = FactoryGirl.create(:vehicle)
+    order_index_path
     click_link_or_button t('helpers.submit.create', model: t('activerecord.models.order'))
     
     within("#new_order") do
       fill_in t('orders.form.order_date'), with: '20/01/2013'
-      # select('#{vehicle.license_plate}', :from => t('order.form.vehicle'))
-      p find("option[value='#{vehicle.id}']")
-      find("option[value='#{vehicle.id}']").click
+      select(vehicle.license_plate, :from => t('orders.form.vehicle'))
       click_link_or_button t('helpers.submit.save')
     end
     expect(page).to have_content t('flash.actions.create.notice', :resource_name => t('activerecord.models.order'))

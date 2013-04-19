@@ -15,7 +15,7 @@
     <legend><%= t('helpers.header.fill_information')%></legend>
 
     <div class="form-inputs">
-      <%= f.input :vehicle_id, :label => t(".vehicle"), :collection => @vehicles %>
+      <%= f.association :vehicle %>
       <%= f.input :order_date, as: :datepicker, placeholder: t(".order_date"), class: "date" %>
     </div>
 
