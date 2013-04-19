@@ -258,6 +258,7 @@
           order_date: "Data"
           closed: "Status"
           value: "Total"
+          vehicle: "Veículo"
       errors:
         template:
           header:
@@ -322,4 +323,3 @@
       form:
         order_date: "Data"
         vehicle: "Veículo"
-        vehicle_id: "Id veículo"

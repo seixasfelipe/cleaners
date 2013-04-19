@@ -5,4 +5,8 @@ class Vehicle < ActiveRecord::Base
 
   belongs_to :customer
   has_many :orders
+
+  def to_label
+    "#{license_plate}"
+  end
 end
