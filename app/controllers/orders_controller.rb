@@ -7,15 +7,15 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @vehicles = Vehicle.all(:order => :license_plate).map { |v| [v.license_plate, v.id] }
 
     respond_with @order
   end
 
   def create
+    logger.debug "Params hash: #{params}"
     @order = Order.new(params[:order])
 
-    @order.vehicle = Vehicle.find(@order.vehicle_id)
-    
     @order.save
 
     respond_with @order
