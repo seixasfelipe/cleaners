@@ -29,6 +29,23 @@ feature "Navigating on order views and" do
     expect(page).not_to have_content t('helpers.errors.not_found')
   end
 
+  scenario "editing one result" do
+    vehicle = FactoryGirl.create(:vehicle)
+    create_new_order
+    order_index_path
+    click_link_or_button t('helpers.submit.edit')
+
+    new_order_date = "21/01/2001"
+
+    expect(page).to have_content t('helpers.header.edit_model', model: t('activerecord.models.order'))
+    fill_in t('orders.form.order_date'), with: new_order_date
+    select(vehicle.license_plate, :from => t('orders.form.vehicle'))
+    click_link_or_button t('helpers.submit.save')
+
+    expect(page).to have_content new_order_date
+    expect(page).not_to have_content t('helpers.errors.not_found')
+  end
+
   scenario "removing one result" do
     create_new_order
 

@@ -29,7 +29,7 @@
       <% @orders.each do |m| %>
       <tr>
         <td><%= link_to "%03d" % m.id, edit_order_path(m.id) %></td>
-        <td><%= m.order_date.to_date %></td>
+        <td><%= l m.order_date.to_date %></td>
         <td><%= m.value %></td>
         <td><%= m.closed %></td>
         <td><%= link_to t('helpers.submit.edit'), edit_order_path(m.id), :class => "btn btn-warning" %>
