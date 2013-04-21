@@ -69,12 +69,12 @@ feature "Navigating on customer views and" do
 
   def customer_index_path
     click_link_or_button t('helpers.submit.list', :model => t('activerecord.models.customer'))
-    expect(page).to have_link "Inserir novo"
+    expect(page).to have_link t('helpers.submit.create', model: t('activerecord.models.customer'))
   end
 
   def new_created_customer
     customer_index_path
-    click_link_or_button 'Inserir novo'
+    click_link_or_button t('helpers.submit.create', model: t('activerecord.models.customer'))
     within("#new_customer") do
       fill_in customer_form_name, with: 'Customer name'
       fill_in t('customers.form.email'), with: 'customer@test.com'

@@ -243,6 +243,7 @@
         country: "País"
         state: "Estado"
         address: "Endereço"
+        order: "Serviço"
       attributes:
         customer:
           name: "Nome"
@@ -271,6 +272,11 @@
           district: "Bairro"
           city: "Cidade"
           zip_code: "CEP"
+        order:
+          order_date: "Data"
+          closed: "Status"
+          value: "Total"
+          vehicle: "Veículo"
       errors:
         template:
           header:
@@ -362,3 +368,12 @@
         city: "Cidade"
         zip_code: "CEP"
 
+    orders:
+      index:
+        id: "Id"
+        order_date: "Data"
+        value: "Total"
+        closed: "Status"
+      form:
+        order_date: "Data"
+        vehicle: "Veículo"

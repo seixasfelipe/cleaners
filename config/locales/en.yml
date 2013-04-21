@@ -227,6 +227,7 @@ en:
         vehicle: "Vehicle"
         state: "State"
         country: "Country"
+        order: "Order"
       attributes:
         customer:
           name: "Name"
@@ -241,6 +242,10 @@ en:
           model: "Model"
           color: "Color"
           brand: "Brand"
+        order:
+          order_date: "Date"
+          closed: "Status"
+          value: "Total"
       errors:
         template:
           header:
@@ -330,3 +335,13 @@ en:
         district: "District"
         city: "City"
         zip_code: "Zip Code"
+    orders:
+      index:
+        id: "Id"
+        order_date: "Date"
+        value: "Total"
+        closed: "Status"
+      form:
+        order_date: "Date"
+        vehicle: "Vehicle"
+        vehicle_id: "Vehicle Id"
