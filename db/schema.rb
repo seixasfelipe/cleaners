@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412121748) do
+ActiveRecord::Schema.define(:version => 20130419040838) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -49,6 +49,19 @@ ActiveRecord::Schema.define(:version => 20130412121748) do
     t.datetime "updated_at",                   :null => false
     t.boolean  "active",     :default => true, :null => false
   end
+
+  create_table "orders", :force => true do |t|
+    t.datetime "order_date"
+    t.boolean  "closed",     :default => false, :null => false
+    t.decimal  "value"
+    t.integer  "vehicle_id",                    :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.datetime "closed_at"
+  end
+
+  add_index "orders", ["closed"], :name => "index_orders_on_closed"
+  add_index "orders", ["vehicle_id"], :name => "index_orders_on_vehicle_id"
 
   create_table "states", :force => true do |t|
     t.string   "name"
