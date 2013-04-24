@@ -32,5 +32,11 @@ describe Order do
       expect(order).not_to be_valid
       expect(order).to have(1).errors_on(:closed)
     end
+
+    it "as #items" do
+      order.items = []
+      expect(order).not_to be_valid
+      expect(order).to have(1).errors_on(:items)
+    end
   end
 end

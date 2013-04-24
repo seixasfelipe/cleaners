@@ -6,5 +6,6 @@ FactoryGirl.define do
     order_date DateTime.new
     value 50.0
     vehicle { FactoryGirl.build(:vehicle) }
+    items { [FactoryGirl.create(:item)] }
   end
 end
