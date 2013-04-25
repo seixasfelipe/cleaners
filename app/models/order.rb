@@ -8,7 +8,7 @@ class Order < ActiveRecord::Base
   has_and_belongs_to_many :items
 
   def total
-    (items.map { |i| i.price }).inject { |sum, p| sum + p }
+    items.map(&:price).inject(0, &:+)
   end
 
 end
