@@ -7,4 +7,8 @@ class Order < ActiveRecord::Base
   belongs_to :vehicle
   has_and_belongs_to_many :items
 
+  def total
+    (items.map { |i| i.price }).inject { |sum, p| sum + p }
+  end
+
 end
