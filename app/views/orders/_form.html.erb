@@ -17,6 +17,7 @@
     <div class="form-inputs">
       <%= f.association :vehicle %>
       <%= f.input :order_date, as: :datepicker, placeholder: t(".order_date"), class: "date" %>
+      <%= f.association :items, :as => :check_boxes %>
     </div>
 
     <div class="form-actions">

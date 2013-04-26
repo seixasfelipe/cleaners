@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-  attr_accessible :order_date, :value, :closed, :vehicle_id, :closed_at
+  attr_accessible :order_date, :value, :closed, :vehicle_id, :closed_at, :item_ids
   
   validates_presence_of :order_date, :vehicle, :items
   validates_inclusion_of :closed, :in => [true, false]
