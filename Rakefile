@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-CleanersPanamby::Application.load_tasks
+Cleaners::Application.load_tasks
