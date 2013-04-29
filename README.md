@@ -1,4 +1,4 @@
-cleaners-panamby
+cleaners
 ================
 
-Cleaners Panamby - Management Application
+Cleaners - Management App

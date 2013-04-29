@@ -1,4 +1,4 @@
-CleanersPanamby::Application.routes.draw do
+Cleaners::Application.routes.draw do
 
   resources :addresses
 
