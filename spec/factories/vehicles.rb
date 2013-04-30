@@ -12,6 +12,6 @@ FactoryGirl.define do
     color { FactoryGirl.generate :color }
     brand { FactoryGirl.generate :brand }
 
-    association :customer, factory: :customer
+    customer
   end
 end

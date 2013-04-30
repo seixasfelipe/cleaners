@@ -251,6 +251,7 @@
           mobile_number: "Celular"
           birth_date: "Data de Nascimento"
           address: "Endereço"
+          vehicles: "Veículos"
         item:
           name: "Nome"
           price: "Preço"
@@ -311,6 +312,7 @@
         mobile_number: "Celular"
         birth_date: "Nascimento"
         address: "Endereço"
+        vehicles: "Veículos"
 
     items:
       index:
@@ -323,6 +325,12 @@
 
     vehicles:
       index:
+        id: "Id"
+        license_plate: "Placa"
+        brand: "Marca"
+        model: "Modelo"
+        color: "Cor"
+      list:
         id: "Id"
         license_plate: "Placa"
         brand: "Marca"

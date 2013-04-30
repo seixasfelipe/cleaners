@@ -8,6 +8,7 @@ class CustomersController < ApplicationController
   def new
     @customer = Customer.new
     @customer.address = Address.new
+    @customer.vehicles = Array.new
     @states = State.order_by_name
 
     respond_with @customer

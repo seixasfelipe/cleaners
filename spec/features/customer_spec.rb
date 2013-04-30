@@ -51,6 +51,20 @@ feature "Navigating on customer views and" do
     expect(page).not_to have_content t('helpers.errors.not_found')
   end
 
+  scenario "editing should show also its vehicles" do
+    
+    customer = FactoryGirl.create :customer, :with_vehicles
+
+    customer_index_path
+    expect(page).to have_link t('helpers.submit.edit')
+    
+    click_link_or_button t('helpers.submit.edit')
+
+    expect(page).to have_content t('helpers.header.edit_model', model: t('activerecord.models.customer'))
+    expect(page).to have_content t('activerecord.attributes.customer.vehicles')
+    expect(page).to have_content customer.vehicles.first.license_plate
+  end
+
   scenario "removing one result" do
     new_created_customer
 
