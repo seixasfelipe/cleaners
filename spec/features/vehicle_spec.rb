@@ -71,10 +71,12 @@ feature "Navigating on vehicle views and" do
   end
 
   def create_new_vehicle
+    customer = FactoryGirl.create(:customer)
     vehicle_index_path
     click_link_or_button t('helpers.submit.create', model: t('activerecord.models.vehicle'))
     within("#new_vehicle") do
       fill_in t('vehicles.form.license_plate'), with: 'XXZ4550'
+      select(customer.name, :from => t('vehicles.form.customer'))
       click_link_or_button t('helpers.submit.save')
     end
     expect(page).to have_content t('flash.actions.create.notice', :resource_name => t('activerecord.models.vehicle'))

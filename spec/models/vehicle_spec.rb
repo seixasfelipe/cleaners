@@ -38,6 +38,11 @@ describe Vehicle do
       expect(vehicle).to have(:no).errors_on(:brand)
     end
 
+    it "as #customer" do
+      vehicle.customer = nil
+      expect(vehicle).not_to be_valid
+      expect(vehicle).to have(1).errors_on(:customer)
+    end
   end
 
 end
