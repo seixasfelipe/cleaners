@@ -202,7 +202,9 @@
         new_model: 'Novo(a) %{model}'
         edit_model: 'Editar %{model}'
         all_model: 'Todo(a)s %{model}s'
-        fill_information: 'Preencha as informações'    
+        fill_information: 'Preencha as informações'
+        open_orders: 'Serviços Abertos'
+        home: 'Início'
 
     errors:
       format: "%{attribute} %{message}"
@@ -387,3 +389,11 @@
       form:
         order_date: "Data"
         vehicle: "Veículo"
+
+    home:
+      open_orders:
+        id: "Id"
+        license_plate: "Placa"
+        customer_name: "Nome do cliente"
+        items: "Itens"
+        total: "Valor total"

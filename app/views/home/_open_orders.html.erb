@@ -1,0 +1,45 @@
+<h1><%=t 'helpers.header.open_orders' %></h1>
+
+  <table class="table table-striped table-condensed table-hover">
+
+    <thead>
+      <tr>
+        <th><%=t '.id' %></th>
+        <th><%=t '.license_plate' %></th>
+        <th><%=t '.customer_name' %></th>
+        <th><%=t '.items' %></th>
+        <th>data</th>
+        <th><%=t '.total' %></th>
+        <th>faturado?</th>
+        <th>pagamento</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+    <% @orders.each do |o| %>
+      <tr>
+        <td><a href="/layout/servicos-detalhes.html"><%= o.id %></a></td>
+        <td><%= o.vehicle.license_plate %></td>
+        <td><%= o.vehicle.customer.name %></td>
+        <td>
+          <ul class="unstyled">
+          <% o.items.each do |i| %>
+            <li><%= i.name %>
+          <%end%>
+          </ul>
+        </td>
+        <td>26/01/2013</td>
+        <td><%= o.total %></td>
+        <td>não</td>
+        <td>--</td>
+        <td><a href="/layout/servicos-finalizar.html" class="btn btn-primary">Finalizar</a>
+          <a href="/layout/servicos-detalhes.html" class="btn btn-info">Detalhes</a>
+        </td>
+      </tr>
+    <%end%>
+
+    </tbody>
+  </table>
+

@@ -5,7 +5,8 @@ FactoryGirl.define do
     closed false
     order_date DateTime.new
     value 50.0
-    vehicle { FactoryGirl.build(:vehicle) }
+    
+    vehicle
     items { [FactoryGirl.create(:item)] }
   end
 end
