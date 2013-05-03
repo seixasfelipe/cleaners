@@ -21,7 +21,7 @@
     <% @orders.each do |o| %>
       <tr>
         <td><a href="/layout/servicos-detalhes.html"><%= o.id %></a></td>
-        <td><%= o.vehicle.license_plate %></td>
+        <td><%= o.vehicle.license_plate.upcase %></td>
         <td><%= o.vehicle.customer.name %></td>
         <td>
           <ul class="unstyled">

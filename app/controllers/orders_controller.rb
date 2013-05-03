@@ -26,7 +26,7 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
-    @order.update_attributes(params[:order])
+    @order.update_attributes(params[:order].except(:total))
    
     respond_with @order
   end

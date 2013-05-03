@@ -30,7 +30,7 @@
       <tr>
         <td><%= link_to "%03d" % m.id, edit_order_path(m.id) %></td>
         <td><%= l(m.order_date.to_date, :format => :default) %></td>
-        <td><%= m.value %></td>
+        <td><%= number_to_currency(m.total, unit: "") %></td>
         <td><%= m.closed %></td>
         <td><%= link_to t('helpers.submit.edit'), edit_order_path(m.id), :class => "btn btn-warning" %>
           <%= link_to t('helpers.submit.remove'), order_path(m.id), :class => "btn btn-danger", :method => :delete %>

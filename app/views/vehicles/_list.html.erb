@@ -16,7 +16,7 @@
       <% vehicles.each do |m| %>
       <tr>
         <td><%= link_to "%03d" % m.id, edit_vehicle_path(m.id) %></td>
-        <td><%= m.license_plate %></td>
+        <td><%= m.license_plate.upcase %></td>
         <td><%= m.model %></td>
         <td><%= m.color %></td>
         <td><%= m.brand %></td>

@@ -16,8 +16,20 @@
 
     <div class="form-inputs">
       <%= f.association :vehicle %>
+      
+      <hr>
+
       <%= f.input :order_date, as: :datepicker, placeholder: t(".order_date"), class: "date" %>
       <%= f.association :items, :as => :check_boxes %>
+
+      <% unless @order.new_record? %>
+      <hr>
+
+      <%= f.input :total, wrapper: :prepend, label: t(".total") do %>
+        <%= content_tag :span, t("number.currency.format.unit"), class: "add-on" %>
+        <%= f.input_field :total, value: number_to_currency(@order.total, unit: "") %>
+      <% end %>
+      <% end %>
     </div>
 
     <div class="form-actions">
