@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Order do
 
-  subject(:order) { FactoryGirl.build(:order) }
+  subject(:order) { FactoryGirl.build :order, :with_items }
 
   context "when initialized" do
     it "is a new Order" do
