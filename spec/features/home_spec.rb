@@ -9,7 +9,7 @@ feature "Navigating home" do
   end
 
   scenario "listing only open orders" do
-    order = FactoryGirl.create :order
+    order = FactoryGirl.create :order, :with_items
 
     click_link_or_button t('helpers.header.home')
 
