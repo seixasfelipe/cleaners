@@ -300,6 +300,7 @@ en:
         brand: "Brand"
         model: "Model"
         color: "Color"
+        customer: "Customer"
 
     countries:
       index:
