@@ -195,6 +195,7 @@ en:
         all_model: 'All %{model}s'
         fill_information: 'Fill with information'
         home: "Home"
+        open_orders: "Open Orders"
 
     errors:
       format: "%{attribute} %{message}"
