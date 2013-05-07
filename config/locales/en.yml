@@ -194,6 +194,7 @@ en:
         edit_model: 'Edit %{model}'
         all_model: 'All %{model}s'
         fill_information: 'Fill with information'
+        home: "Home"
 
     errors:
       format: "%{attribute} %{message}"
