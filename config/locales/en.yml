@@ -235,6 +235,7 @@ en:
           email: "Email"
           mobile_number: "Mobile Number"
           birth_date: "Birth Date"
+          vehicles: "Vehicles"
         item:
           name: "Name"
           price: "Price"
