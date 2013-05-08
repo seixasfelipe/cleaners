@@ -36,13 +36,14 @@ feature "Navigating on order views and" do
     click_link_or_button t('helpers.submit.edit')
 
     new_order_date = "21/01/2001"
+    expected_localized_date = Date.strptime("{ 2001, 01, 21}", "{ %Y, %m, %d }")
 
     expect(page).to have_content t('helpers.header.edit_model', model: t('activerecord.models.order'))
     fill_in t('orders.form.order_date'), with: new_order_date
     select(vehicle.license_plate, :from => t('orders.form.vehicle'))
     click_link_or_button t('helpers.submit.save')
 
-    expect(page).to have_content new_order_date
+    expect(page).to have_content l(expected_localized_date, :format => :default)
     expect(page).not_to have_content t('helpers.errors.not_found')
   end
 
