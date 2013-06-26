@@ -1,0 +1,26 @@
+<html>
+
+<body>
+
+  <select data-placeholder="Nome do Cliente..." class="chzn-select">
+    <option value></option>
+    <option value="Felipe Silva">Felipe Silva</option>
+    <option value="Romero Britto">Romero Britto</option>
+    <option value="Fatima Bernardes">Fatima Bernardes</option>
+    <option value="For Adun">For Adun</option>
+    <option value="Michael Jackson">Michael Jackson</option>
+    <option value="Alex Kid">Alex Kid</option>
+  </select>
+
+  <script src="/layout/assets/js/jquery-1.9.0.min.js"></script>
+  <script src="/layout/assets/js/chosen.jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      $(".chzn-select").chosen({no_results_text: "Oops, nothing found!"});
+    });
+  </script>
+
+</body>
+
+</html>
